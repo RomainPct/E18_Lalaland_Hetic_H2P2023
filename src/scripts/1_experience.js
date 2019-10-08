@@ -32,7 +32,6 @@ function filtreThemes(theme, i){
 }
 
 function playNote(index){
-    console.log("Play note : "+index)
     select('#js_note'+index).play()
 }
 
@@ -43,20 +42,26 @@ function setThemesInput(){
         // Chercher le mot que l'utilisateur tape parmis les thèmes dispos
         possibleThemes = themes.filter(filtreThemes)
         if (possibleThemes.length > 0) {
-            setThemeLabelContent((possibleThemes.length == 1) ? possibleThemes[0] : "")
+            setThemeLabelContent((possibleThemes.length == 1) ? possibleThemes[0] : possibleThemes[Math.floor(Math.random()*possibleThemes.length)])
+            themeInput.value = possibleThemes[0].substring(0,typedTheme.length)
             videosContainer.style.filter = "saturate("+ 100 * (typedTheme.length / possibleThemes[0].length) +"%)"
             if (isLonger) {
                 playNote(typedTheme.length)
             }
             if (themes.includes(typedTheme)){
-                for (let i = typedTheme.length + 1; i <= 7; i++) {
-                    playNote(i)
+                for (let i = 1; i <= 7 - typedTheme.length; i++) {
+                    setTimeout(function(){
+                        playNote(typedTheme.length + i)
+                    }, 350 * i)
                 }
                 hideAndCleanExperienceNavigator()
                 launchVideo()
             }
         } else {
-            // Pas de thèmes correspondants à sa recherche
+            // Lancer le son mauvais
+            // Annuler la derniere lettre
+            typedTheme = typedTheme.slice(0, -1)
+            themeInput.value = typedTheme
         }
     })
 }
@@ -104,11 +109,23 @@ function setHelpWords(){
     })
 }
 
+function loadNotes(){
+    let audios = select('#audios')
+    for (let i = 1; i <= 7; i++) {
+        let audio = document.createElement('audio')
+        audio.setAttribute('id','js_note'+i)
+        audio.setAttribute('src','assets/songs/note'+i+'.mp3')
+        audios.appendChild(audio)
+        audio.load()
+    }
+}
+
 function setExperience(){
     setThemesInput()
     setExperienceActions()
     setHelpWords()
     setThemeLabelContent()
+    loadNotes()
 }
 
 setExperience()
