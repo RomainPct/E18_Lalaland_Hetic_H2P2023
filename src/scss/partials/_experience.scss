@@ -9,6 +9,14 @@
         opacity: 1;
         transform: scale(1);
     }
+    &.videoFocused {
+        .experience__videosContainer::after, .experience__videosContainer::before {
+            height: 250px;
+        }
+        .experience__navigator {
+            opacity: 0;
+        }
+    }
     &__navigator {
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
@@ -18,9 +26,6 @@
         align-items: center;
         justify-content: center;
         transition: opacity .5s;
-        &.hidden {
-            opacity: 0;
-        }
         &__inputBox {
             margin: 0 auto;
             padding: 0 0 0 2vw;
@@ -54,7 +59,7 @@
                 margin-top: 62px;
                 span {
                     cursor: pointer;
-                    margin: 0 81px;
+                    padding: 31px 81px;
                     font-family: $font-primary;
                     font-size: $font-size-title;
                     letter-spacing: 1vw;
@@ -85,7 +90,7 @@
             height: 150px;
             position: absolute;
             left: 0; right: 0;
-            transition: height .2s;
+            transition: height 1s;
         }
         &::before {
             top: 0;

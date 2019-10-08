@@ -11,17 +11,17 @@ const launchExpButton = select('#js_launchExperience'),
     typedTheme = ""
 
 function hideAndCleanExperienceNavigator(){
-    experienceNavigator.classList.add('hidden')
+    experience.classList.add('videoFocused')
     setTimeout(function(){
         setThemeLabelContent(null,true)
-    },1000)
+    },3000)
 }
 function launchVideo(){
     video = videosContainer.querySelector('video[data-name="'+typedTheme+'"]')
     video.play()
     // Réaffiche le navigateur quand la vidéo est finie
     video.addEventListener('ended',function(){
-        experienceNavigator.classList.remove('hidden')
+        experience.classList.remove('videoFocused')
         themeInput.focus()
         videosContainer.style.filter = "saturate(0%)"
     })
@@ -49,16 +49,20 @@ function setThemesInput(){
                 playNote(typedTheme.length)
             }
             if (themes.includes(typedTheme)){
-                for (let i = 1; i <= 7 - typedTheme.length; i++) {
+                hideAndCleanExperienceNavigator()
+                for (let i = 1; i <= 8 - typedTheme.length; i++) {
                     setTimeout(function(){
-                        playNote(typedTheme.length + i)
+                        if (i <= 7 - typedTheme.length) {
+                            playNote(typedTheme.length + i)
+                        } else {
+                            launchVideo()
+                        }
                     }, 350 * i)
                 }
-                hideAndCleanExperienceNavigator()
-                launchVideo()
             }
         } else {
             // Lancer le son mauvais
+            playNote(8)
             // Annuler la derniere lettre
             typedTheme = typedTheme.slice(0, -1)
             themeInput.value = typedTheme
@@ -76,8 +80,9 @@ function setExperienceActions(){
     leaveExperienceButton.addEventListener('click',function(e){
         e.preventDefault()
         experience.classList.remove('visible')
+        experience.classList.remove('videoFocused')
         videosContainer.querySelectorAll('video').forEach(video => {
-            video.pause()  
+            video.pause()
         })
     })
 }
@@ -91,6 +96,7 @@ function setThemeLabelContent(value = null, resetingInput = false){
     themeInput.style.width = themeLabel.offsetWidth +"px"
     if (resetingInput) {
         themeInput.value = ""
+        typedTheme = ""
     }
 }
 
@@ -111,7 +117,7 @@ function setHelpWords(){
 
 function loadNotes(){
     let audios = select('#audios')
-    for (let i = 1; i <= 7; i++) {
+    for (let i = 1; i <= 8; i++) {
         let audio = document.createElement('audio')
         audio.setAttribute('id','js_note'+i)
         audio.setAttribute('src','assets/songs/note'+i+'.mp3')
