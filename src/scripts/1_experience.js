@@ -8,7 +8,8 @@ const launchExpButton = select('#js_launchExperience'),
     helpLines = selectAll('.experience__navigator__help__line'),
     themes = [ "amour", "bonheur", "danse", "casting", "rêves", "nuit", "passion", "futur", "échec", "magie", "soulier" ],
     themesUnaccented = [ "amour", "bonheur", "danse", "casting", "reves", "nuit", "passion", "futur", "echec", "magie", "soulier" ],
-    typedTheme = ""
+    typedTheme = "",
+    keySounds = []
 
 function hideAndCleanExperienceNavigator(){
     experience.classList.add('videoFocused')
@@ -32,7 +33,11 @@ function filtreThemes(theme, i){
 }
 
 function playNote(index){
-    select('#js_note'+index).play()
+    keySounds[index].play()
+    keySounds[index].addEventListener('ended',function(){
+        keySounds[index] = new Audio('assets/songs/note'+index+'.mp3')
+        keySounds[index].load()
+    })
 }
 
 function setThemesInput(){
@@ -46,13 +51,13 @@ function setThemesInput(){
             themeInput.value = possibleThemes[0].substring(0,typedTheme.length)
             videosContainer.style.filter = "saturate("+ 100 * (typedTheme.length / possibleThemes[0].length) +"%)"
             if (isLonger) {
-                playNote(typedTheme.length)
+                playNote(typedTheme.length - 1)
             }
             if (themes.includes(typedTheme)){
                 hideAndCleanExperienceNavigator()
-                for (let i = 1; i <= 8 - typedTheme.length; i++) {
+                for (let i = 0; i <= 7 - typedTheme.length; i++) {
                     setTimeout(function(){
-                        if (i <= 7 - typedTheme.length) {
+                        if (i <= 6 - typedTheme.length) {
                             playNote(typedTheme.length + i)
                         } else {
                             launchVideo()
@@ -116,13 +121,10 @@ function setHelpWords(){
 }
 
 function loadNotes(){
-    let audios = select('#audios')
-    for (let i = 1; i <= 8; i++) {
-        let audio = document.createElement('audio')
-        audio.setAttribute('id','js_note'+i)
-        audio.setAttribute('src','assets/songs/note'+i+'.mp3')
-        audios.appendChild(audio)
-        audio.load()
+    for (let i = 0; i <= 7; i++) {
+        let sound = new Audio('assets/songs/note'+i+'.mp3')
+        sound.load()
+        keySounds.push(sound)
     }
 }
 

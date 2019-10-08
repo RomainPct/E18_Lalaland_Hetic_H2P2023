@@ -32,6 +32,7 @@
             position: relative;
             border-bottom: 2px solid $light-text-color-secondary;
             &__input {
+                margin: 0;
                 width: 100%;
                 background: transparent;
                 border: none;
