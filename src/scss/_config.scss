@@ -1,12 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+@font-face {font-family: "Yasashii";
+    src: url("../fonts/84ed805b799a7034568767668b7c9316.eot"); /* IE9*/
+    src: url("../fonts/84ed805b799a7034568767668b7c9316.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/84ed805b799a7034568767668b7c9316.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/84ed805b799a7034568767668b7c9316.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/84ed805b799a7034568767668b7c9316.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/84ed805b799a7034568767668b7c9316.svg#Yasashii W01 Bold") format("svg"); /* iOS 4.1- */
+  }
 
 $color-primary: #604C8C;
 $color-secondary: #C76232;
 $background-color: #F9F9FC;
 $text-color: #120C06;
+$light-text-color-primary: rgba(255,255,255,1);
+$light-text-color-secondary: rgba(255,255,255,0.7);
+$light-text-color-placeholder: rgba(255,255,255,0.4);
 
-$font-primary: 'Muli', sans-serif;
-$font-size-title: 26px;
-$font-size-body: 16px;
+$font-default: 'Arial', sans-serif;
+$font-primary: 'Yasashii', sans-serif;
+$font-size-extra: 100px;
+$font-size-title: 23px;
+$font-size-body: 14px;
 
 

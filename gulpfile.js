@@ -51,27 +51,16 @@ gulpfile.task('cssMinfier', function() {
 
 gulpfile.task('connect-sync',function(){
     plugins.connectPhp.server({},function(){
-        browserSync({
-            proxy: '127.0.0.1:8000'
-          });
+        browserSync({ proxy: '127.0.0.1:8000' })
     })
     gulpfile.watch('./src/scripts/*.js', gulpfile.series('js'))
     gulpfile.watch('./src/scss/**/*.scss', gulpfile.series('css'))
     gulpfile.watch('**/*.php').on('change', function () {
         browserSync.reload()
-      });
-});
-
-gulpfile.task('disconnect', function() {
-    connect.closeServer();
-});
+    })
+})
 
 gulpfile.task('js', gulpfile.series('jsLint', 'jsMinifier'))
 gulpfile.task('css', gulpfile.series('sass', 'cssMinfier'))
-// gulpfile.task('watch', function() {
-//     gulpfile.watch('./src/scripts/*.js', gulpfile.series('js','reload'))
-//     gulpfile.watch('./src/scss/**/*.scss', gulpfile.series('css','reload'))
-//     gulpfile.watch('**/*.php', gulpfile.series('reload'))
-// });
 
-gulpfile.task('default', gulpfile.series('js','css','connect-sync','disconnect'));
+gulpfile.task('default', gulpfile.series('js','css','connect-sync'))

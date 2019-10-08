@@ -2,6 +2,9 @@
 
 @import "partials/header";
 @import "partials/footer";
+@import "partials/fonts";
+@import "partials/buttons";
+@import "partials/experience";
 
 body, html {
   height: 100%;
@@ -9,7 +12,7 @@ body, html {
 body {
   margin: 0;
   background-color: $background-color;
-  color: $text-color;
-  font-family: $font-primary;
+  color: $light-text-color-secondary;
+  font-family: $font-default;
   font-size: $font-size-body;
 }

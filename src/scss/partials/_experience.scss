@@ -1,0 +1,114 @@
+.experience {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: #000;
+    opacity: 0;
+    transform: scale(0.1);
+    transition: opacity 1s, transform 1s;
+    &.visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+    &__navigator {
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity .5s;
+        &.hidden {
+            opacity: 0;
+        }
+        &__inputBox {
+            margin: 0 auto;
+            padding: 0 0 0 2vw;
+            position: relative;
+            border-bottom: 2px solid $light-text-color-secondary;
+            &__input {
+                width: 100%;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: $light-text-color-primary;
+            }
+            &__label {
+                color: $light-text-color-placeholder;
+                position: absolute;
+                top: 0; bottom: 0; left: 2vw;
+                z-index: -1;
+            }
+            &__input, &__label {
+                font-family: $font-primary;
+                letter-spacing: 3vw;
+                font-size: $font-size-extra;
+            }
+        }
+        &__instructions {
+            text-align: center;
+        }
+        &__help {
+            margin-top: 100px;
+            &__line {
+                margin-top: 62px;
+                span {
+                    cursor: pointer;
+                    margin: 0 81px;
+                    font-family: $font-primary;
+                    font-size: $font-size-title;
+                    letter-spacing: 1vw;
+                    color: transparent;
+                    text-shadow: 0 0 5px $light-text-color-placeholder;
+                    transition: text-shadow 1s;
+                }
+                span:hover {
+                    text-shadow: 0 0 1px $light-text-color-secondary;
+                }
+            }
+            &__line:nth-child(1) {
+                animation: helpLineAnim 100s linear 0s infinite alternate both;
+            }
+            &__line:nth-child(2) {
+                animation: helpLineAnim 100s linear 0s infinite alternate-reverse both;
+            }
+        }
+    }
+    &__videosContainer {
+        width: 100%;
+        height: 100%;
+        filter: saturate(0%);
+        transition: filter .2s;
+        &::after, &::before {
+            content: ' ';
+            display: block;
+            height: 150px;
+            position: absolute;
+            left: 0; right: 0;
+            transition: height .2s;
+        }
+        &::before {
+            top: 0;
+            background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+        }
+        &::after {
+            bottom: 0;
+            background: linear-gradient(to top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+        }
+    }
+    &__leaveLabel {
+        position: absolute;
+        left: 50%;
+        bottom: 26px;
+        transform: translateX(-50%);
+        z-index: 100;
+    }
+    audio {
+        display: none;
+    }
+}
+
+@keyframes helpLineAnim {
+    from { transform: translateX(-50vw) }
+    to { transform: translateX(50vw) }
+}

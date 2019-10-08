@@ -2,7 +2,7 @@
 <html>
 <head lang="fr">
     <meta charset="utf-8">
-    <title>Nom du site - <?php include 'php/rooterTitle.php' ?></title>
+    <title>La La Land - <?php include 'php/rooterTitle.php' ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="">
@@ -12,7 +12,7 @@
     <meta property="og:description" content="">
     <meta property="og:url" content="">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:site_name" content="Nom du site">
+    <meta property="og:site_name" content="La La Land - Le Film">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="/assets/styles/main.min.css">
 </head>
