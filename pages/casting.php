@@ -1,6 +1,6 @@
 <section class="containerRyanGosling">
     <div class="containerRyanGosling__ImageRyan">
-        <img src="" alt="Ryan Gosling">
+        <img src="assets/images/Ryan-Gosling.jpg" alt="Ryan Gosling">
     </div>
     <div class="containerRyanGosling__descriptionRyan">
         <h2>Ryan Gosling</h2>
@@ -10,7 +10,7 @@
 </section>
 <section class="containerEmmaStone">
     <div class="containerEmmaStone__ImageEmma">
-        <img src="" alt="Emma Stone">
+        <img src="assets/images/Emma-Stone.jpg" alt="Emma Stone">
     </div>
     <div class="containerEmmaStone__descriptionEmma">
         <h2>Emma Stone</h2>
