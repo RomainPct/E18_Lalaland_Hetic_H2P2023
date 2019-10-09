@@ -5,12 +5,15 @@
     z-index: 0;
     right: 0;
     left: 0;
-    top: 0px;
+    top: 0;
     &__descriptionRyan{
         font-family: $font-default;
+        font-size: $font-size-title;
         background-color: #6A2FB3;
         h2{
             font-family: $font-primary;
+            font-size: $font-size-extra;
+            margin: 0px 100px;
         }
         p{
             margin: 14px 100px;
@@ -29,9 +32,12 @@
     top: 0px;
     &__descriptionEmma{
         font-family: $font-default;
+        font-size: $font-size-title;
         background-color: #03084A;
         h2{
             font-family: $font-primary;
+            font-size: $font-size-extra;
+            margin: 0px 100px;
         }
         p{
             margin: 14px 100px;
