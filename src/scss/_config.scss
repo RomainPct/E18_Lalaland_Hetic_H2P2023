@@ -19,6 +19,7 @@ $light-text-color-placeholder: rgba(255,255,255,0.4);
 $font-default: 'Arial', sans-serif;
 $font-primary: 'Yasashii', sans-serif;
 $font-size-extra: 100px;
+$font-size-s-extra: 61px;
 $font-size-large-title: 37px;
 $font-size-title: 23px;
 $font-size-body: 14px;
@@ -34,7 +35,6 @@ h1 {
 h2 {
   font-family: $font-primary;
   font-size: $font-size-extra;
-  margin: 0px 100px;
   color: $light-text-color-primary;
 }
 
@@ -44,10 +44,19 @@ h3 {
   color: $light-text-color-primary;
 }
 
+h4 {
+  font-family: $font-default;
+  font-size: $font-size-s-extra;
+  color: $light-text-color-placeholder;
+  font-weight: 400;
+}
+
 p {
   color: $light-text-color-secondary;
   font-size: $font-size-title;
   line-height: 1.5;
   margin: 0;
 }
-
+p.small {
+  font-size: $font-size-body;
+}

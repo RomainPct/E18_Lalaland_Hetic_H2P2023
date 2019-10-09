@@ -1,3 +1,28 @@
-footer {
-    
+#home {
+    overflow: hidden;
+}
+.footer {
+    padding: 100px 100px 26px;
+    background: $color-primary;
+    &__link:hover h2, &__link:hover h4 {
+        text-shadow: 0 0 1px $light-text-color-secondary;
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-decoration: none;
+        h2, h4 {
+            color: transparent;
+            text-shadow: 0 0 10px $light-text-color-secondary;
+            transition: text-shadow 1s;
+        }
+        h4 {
+            margin-right: $font-size-body;
+            margin-bottom: -$font-size-body;
+        }
+    }
+    &__disclaimer {
+        margin-top: 100px;
+    }
 }

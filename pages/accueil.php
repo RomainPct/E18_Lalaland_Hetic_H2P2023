@@ -1,3 +1,7 @@
+<?php
+$nextPageLink = "/synopsis";
+$nextPageName = "Le synopsis";
+?>
 <section id="home">
     <img src="assets/images/laladance.jpg" class="hero_background" alt="">
     <span class="title">La La Land</span>
