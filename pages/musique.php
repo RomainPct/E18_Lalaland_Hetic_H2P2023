@@ -1,7 +1,7 @@
 
 <?php
-$nextPageLink = "http://www.allocine.fr/";
-$nextPageName = "Réserver votre place";
+$nextPageLink = "http://www.allocine.fr/film/fichefilm_gen_cfilm=229490.html";
+$nextPageName = "La La Land";
 ?>
 
 <section id="musicPageTitle">
