@@ -8,7 +8,7 @@ $nextPageName = "La gallerie";
     </div>
     <div class="containerRyanGosling__descriptionRyan">
         <h2>Ryan Gosling</h2>
-        <p>Dans le rôle de <b>Sebastien Wilder</b></p>
+        <p class="roleText">Dans le rôle de Sebastien Wilder</p>
         <p>Acteur et producteur de cinéma, a dès son plus jeune âge exercé la danse. Il a tourné dans le célèbre drame romantique <i>N’oublie jamais (The Notebook).</i></p>
     </div>
 </section>
@@ -18,7 +18,7 @@ $nextPageName = "La gallerie";
     </div>
     <div class="containerEmmaStone__descriptionEmma">
         <h2>Emma Stone</h2>
-        <p>Dans le rôle de <b>Mia Dolan</b></p>
+        <p class="roleText">Dans le rôle de Mia Dolan</p>
         <p>L’actrice américaine s’est imposée dans le monde du cinéma grâce à son expérience dans des classiques tels que <i>La Couleur des sentiments</i> et <i>The Amazing Spider-man.</i></p>
     </div>
 </section>
@@ -28,7 +28,7 @@ $nextPageName = "La gallerie";
     </div>
     <div class="containerJohnLegend__descriptionJohn">
         <h2>John Legend</h2>
-        <p>Dans le rôle de <b>Keith</b></p>
-        <p>L’actrice américaine s’est imposée dans le monde du cinéma grâce à son expérience dans des classiques tels que <i>La Couleur des sentiments</i> et <i>The Amazing Spider-man.</i></p>
+        <p class="roleText">Dans le rôle de Keith</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae saepe labore sunt quis? Quisquam odit odio, ab corrupti ipsum cumque quis dicta ex error? Perferendis repudiandae facilis omnis voluptatibus repellat.</p>
     </div>
 </section>
