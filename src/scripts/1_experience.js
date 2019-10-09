@@ -157,4 +157,6 @@ function setExperience(){
     loadNotes()
 }
 
-setExperience()
+if (window.location.pathname == "/" || window.location.pathname == "/accueil") {
+    setExperience()
+}
