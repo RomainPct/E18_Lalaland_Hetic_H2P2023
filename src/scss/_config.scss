@@ -15,7 +15,7 @@
 }
 
 $color-primary: #6A2FB3;
-$color-secondary: #C76232;
+$color-secondary: #457270;
 $color-tertiary: #03084A;
 $background-color: #101010;
 $text-color: #120C06;
@@ -69,6 +69,10 @@ p {
   font-size: $font-size-title;
   line-height: 1.5;
   margin: 0;
+}
+
+p.roleText{
+  font-weight: bold;
 }
 
 p.small {

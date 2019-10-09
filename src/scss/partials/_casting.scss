@@ -1,86 +1,36 @@
-.containerRyanGosling{
+.characterContainer {
+    &.stone .characterContainer__description{
+        background-color: $color-tertiary;
+    }
+    &.gosling .characterContainer__description{
+        background-color: $color-secondary;
+    }
+    &.legend .characterContainer__description{
+        background-color: $color-primary;
+    }
+    &.simmons .characterContainer__description{
+        background-color: $color-secondary;
+    }
     position: relative;
-    justify-content: space-between;
     display: flex;
     z-index: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    &__imageRyan{
-      //  width: 50%;
-        img{
-           width: 50vw;
-           display: block;
-        }
-    }
-    &__descriptionRyan{
-        font-family: $font-default;
-        font-size: $font-size-title;
-        background-color:$color-primary;
-        h2{
-            margin-top: 100px;
-        }
-        p{
-            margin: 14px 100px;
-            color: $light-text-color-primary;
-        }
-    }
-}
-
-.containerEmmaStone{
-    position: relative;
-    justify-content: space-between;
-    display: flex;
-    z-index: 1;
-    right: 0;
-    left: 0;
-    top: 0px;
-    &__imageEmma{
-      //  width: 50%;
-        img{
-            width: 50vw;
+    &__img {
+        width: 50vw;
+        img {
+            width: 100%;
             display: block;
         }
     }
-    &__descriptionEmma{
-        font-family: $font-default;
-        font-size: $font-size-title;
-        background-color:$color-tertiary;
-        h2{
-            margin-top: 100px;
-        }
-        p{
-            margin: 14px 100px;
-            color: $light-text-color-primary;
-        }
-    }
-}
-
-.containerJohnLegend{
-    position: relative;
-    justify-content: space-between;
-    display: flex;
-    z-index: 1;
-    right: 0;
-    left: 0;
-    top: 0px;
-    &__imageJohn{
-       // width: 50%;
-        img{
-            width: 50vw;
-            display: block;
-        }
-    }
-    &__descriptionJohn{
-        font-family: $font-default;
-        font-size: $font-size-title;
-        background-color: $color-secondary;
-        h2{
-            margin-top: 100px;
-        }
-        p{
-            margin: 14px 100px;
-            color: $light-text-color-primary;
-        }
+    &__description {
+        width: 50vw;
+        background-color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: $light-text-color-primary;
+        box-sizing: border-box;
+        padding: 0 100px;
+        //font-family: $font-default;
     }
 }
