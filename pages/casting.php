@@ -1,6 +1,6 @@
 <?php
-$nextPageLink = "/gallerie";
-$nextPageName = "La gallerie";
+$nextPageLink = "/galerie";
+$nextPageName = "La galerie";
 ?>
 <section class="containerRyanGosling">
     <div class="containerRyanGosling__imageRyan">
