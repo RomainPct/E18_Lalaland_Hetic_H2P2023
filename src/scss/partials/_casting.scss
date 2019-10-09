@@ -1,0 +1,41 @@
+.containerRyanGosling{
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    z-index: 0;
+    right: 0;
+    left: 0;
+    top: 0px;
+    &__descriptionRyan{
+        font-family: $font-default;
+        background-color: #6A2FB3;
+        h2{
+            font-family: $font-primary;
+        }
+        p{
+            margin: 14px 100px;
+            color: $light-text-color-primary;
+        }
+    }
+}
+
+.containerEmmaStone{
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    top: 0px;
+    &__descriptionEmma{
+        font-family: $font-default;
+        background-color: #03084A;
+        h2{
+            font-family: $font-primary;
+        }
+        p{
+            margin: 14px 100px;
+            color: $light-text-color-primary;
+        }
+    }
+}

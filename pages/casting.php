@@ -4,7 +4,7 @@
     </div>
     <div class="containerRyanGosling__descriptionRyan">
         <h2>Ryan Gosling</h2>
-        <p>Dans le rôle de Sebastien Wilder </p>
+        <p>Dans le rôle de Sebastien Wilder</p>
         <p>Acteur et producteur de cinéma, a dès son plus jeune âge exercé la danse. Il a tourné dans le célèbre drame romantique N’oublie jamais (The Notebook).</p>
     </div>
 </section>
