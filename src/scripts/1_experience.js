@@ -35,14 +35,6 @@ function filtreThemes(theme, i){
 function playNote(index){
     console.log("Play note "+index)
     keySounds[index].play()
-    if (isSafari) {
-        keySounds[index].addEventListener('ended',function(){
-            console.log("Reload note "+index+" ended")
-            keySounds[index] = new Audio('assets/songs/note'+index+'.mp3')
-            keySounds[index].preload = "auto";
-            keySounds[index].load()
-        })
-    }
 }
 
 function setThemesInput(){
@@ -127,10 +119,9 @@ function setHelpWords(){
 
 function loadNotes(){
     for (let i = 0; i <= 7; i++) {
-        const sound = new Audio('assets/songs/note'+i+'.mp3')
-        sound.preload = "auto";
-        sound.load()
-        keySounds.push(sound)
+        keySounds.push(new Howl({
+            src: ['assets/songs/note'+i+'.webm','assets/songs/note'+i+'.mp3']
+        }))
     }
 }
 
@@ -143,10 +134,3 @@ function setExperience(){
 }
 
 setExperience()
-
-// var sound = new Howl({
-//     src: ['assets/songs/note1.mp3']
-// })
-// console.log(sound)
-  
-// sound.play()
