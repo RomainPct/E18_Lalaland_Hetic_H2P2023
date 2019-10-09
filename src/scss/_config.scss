@@ -7,8 +7,9 @@
     url("../fonts/84ed805b799a7034568767668b7c9316.svg#Yasashii W01 Bold") format("svg"); /* iOS 4.1- */
   }
 
-$color-primary: #604C8C;
+$color-primary: #6A2FB3;
 $color-secondary: #C76232;
+$color-tertiary: #03084A;
 $background-color: #101010;
 $text-color: #120C06;
 $light-text-color-primary: rgba(255,255,255,1);
@@ -21,4 +22,13 @@ $font-size-extra: 100px;
 $font-size-title: 23px;
 $font-size-body: 14px;
 
+h3{
+  font-family: $font-primary;
+  font-size: 100px;
+}
+
+h2{
+  font-family: $font-primary;
+  font-size: 37px;
+}
 
