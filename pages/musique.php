@@ -10,7 +10,7 @@ $nextPageName = "La La Land";
     <div id="musicPageContainer__Sub">
         <div id="musicPageContainer__Sub__leftBox">
              <iframe src="https://open.spotify.com/embed/album/3GU8BzFEAdFSRjc8jZkL3S" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-         <div id="musicPageContainerSub__leftBox__iconsBox">
+         <div id="musicPageContainer__Sub__leftBox__iconsBox">
                 <a href="https://music.apple.com/fr/album/la-la-land-original-motion-picture-soundtrack/1440863506"><img src="../assets/images/imagesMusique/logoitunes.png" alt="itunes"></a>
              <a href="https://music.amazon.fr/albums/B01N74N5LW?ref=dm_sh_de4c-7a80-dmcp-97ad-1e766&musicTerritory=FR&marketplaceId=A13V1IB3VIYZZH"><img src="../assets/images/imagesMusique/logoamazon.png" alt="amazon music"></a>
              <a href="https://music.amazon.fr/albums/B01N74N5LW?ref=dm_sh_de4c-7a80-dmcp-97ad-1e766&musicTerritory=FR&marketplaceId=A13V1IB3VIYZZH"><img src="../assets/images/imagesMusique/logogoogleplay.png" alt="amazon music"></a>

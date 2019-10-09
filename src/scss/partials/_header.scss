@@ -1,0 +1,30 @@
+.menuIcon{
+    position: fixed;
+    left: 37px;
+    top: 37px;
+}
+
+.menuIcon:hover{
+    cursor: pointer;
+}
+
+.subMenu{
+    height: 100%;
+    background-color: $color-secondary;
+    position: fixed;
+    left: -800px;
+    
+}
+#header__box{
+    padding: 100px;
+    
+
+    ul{
+        list-style: none;
+        line-height: 37px;
+    }
+}
+
+.visible{
+    left: 0;
+}
