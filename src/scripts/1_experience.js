@@ -5,6 +5,7 @@ const launchExpButton = select('#js_launchExperience'),
     themeLabel = select('#js_experienceNavigatorLabel'),
     leaveExperienceButton = select('#js_leaveExperience'),
     videosContainer = select('#js_videosContainer'),
+    loadedVideos = [],
     helpLines = selectAll('.experience__navigator__help__line'),
     themes = [ "amour", "bonheur", "danse", "casting", "rêves", "nuit", "passion", "futur", "échec", "magie", "soulier" ],
     themesUnaccented = [ "amour", "bonheur", "danse", "casting", "reves", "nuit", "passion", "futur", "echec", "magie", "soulier" ],
@@ -90,15 +91,21 @@ function setExperienceActions(){
 }
 
 function setThemeLabelContent(value = null, resetingInput = false){
-    if (value !== null) {
-        themeLabel.innerText = value
-    } else {
-        themeLabel.innerText = themes[Math.floor(Math.random()*themes.length)]
-    }
+    const selectedTheme = (value !== null) ? value : themes[Math.floor(Math.random()*themes.length)]
+    themeLabel.innerText = selectedTheme
     themeInput.style.width = themeLabel.offsetWidth +"px"
     if (resetingInput) {
         themeInput.value = ""
         typedTheme = ""
+    }
+    // Load la video
+    if (!loadedVideos.includes(selectedTheme)) {
+        const video = document.createElement('video')
+        video.setAttribute('src','assets/videos/'+selectedTheme+'.mp4')
+        video.setAttribute('preload','auto')
+        video.setAttribute('data-name',selectedTheme)
+        videosContainer.appendChild(video)
+        loadedVideos.push(selectedTheme)
     }
 }
 
