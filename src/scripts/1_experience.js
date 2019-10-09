@@ -19,7 +19,14 @@ function hideAndCleanExperienceNavigator(){
     },3000)
 }
 function launchVideo(){
+    focusedVideo = videosContainer.querySelector('video.focus')
+    if (focusedVideo !== null) {
+        focusedVideo.style.zIndex = "10"
+        focusedVideo.classList.remove('focus')
+    }
     video = videosContainer.querySelector('video[data-name="'+typedTheme+'"]')
+    video.style.zIndex = "100"
+    video.classList.add('focus')
     video.play()
     // Réaffiche le navigateur quand la vidéo est finie
     video.addEventListener('ended',function(){
@@ -101,7 +108,7 @@ function setThemeLabelContent(value = null, resetingInput = false){
     // Load la video
     if (!loadedVideos.includes(selectedTheme)) {
         const video = document.createElement('video')
-        video.setAttribute('src','assets/videos/'+selectedTheme+'.mp4')
+        video.setAttribute('src','assets/videos/'+selectedTheme+'.m4v')
         video.setAttribute('preload','auto')
         video.setAttribute('data-name',selectedTheme)
         videosContainer.appendChild(video)

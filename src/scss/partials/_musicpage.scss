@@ -1,0 +1,31 @@
+#musicPageTitle{
+    margin-top: 100px;
+}
+#musicPageContainer{
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    &__leftBox{
+        width: 70%;
+        iframe{
+            width: 80%;
+            height: 30vw;
+        }
+        &__iconsBox{
+            padding-top: 37px;
+        }
+    }
+    &__rightBox{
+        width: 30%;
+        height: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        #albumCover{
+           width: 30vw;
+        }
+        a{
+            text-align: center;
+        }
+    }
+}

@@ -14,8 +14,9 @@
   /* iOS 4.1- */
 }
 
-$color-primary: #604C8C;
+$color-primary: #6A2FB3;
 $color-secondary: #C76232;
+$color-tertiary: #03084A;
 $background-color: #101010;
 $text-color: #120C06;
 $light-text-color-primary: rgba(255, 255, 255, 1);
@@ -27,5 +28,49 @@ sans-serif;
 $font-primary: 'Yasashii',
 sans-serif;
 $font-size-extra: 100px;
+$font-size-s-extra: 61px;
+$font-size-large-title: 37px;
 $font-size-title: 23px;
 $font-size-body: 14px;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-family: $font-primary;
+  font-size: $font-size-extra;
+  color: $light-text-color-primary;
+}
+
+h3 {
+  font-family: $font-default;
+  font-size: $font-size-extra;
+  color: $light-text-color-primary;
+}
+
+h4 {
+  font-family: $font-default;
+  font-size: $font-size-s-extra;
+  color: $light-text-color-placeholder;
+  font-weight: 400;
+}
+
+p {
+  color: $light-text-color-secondary;
+  font-size: $font-size-title;
+  line-height: 1.5;
+  margin: 0;
+}
+
+p.small {
+  font-size: $font-size-body;
+}
