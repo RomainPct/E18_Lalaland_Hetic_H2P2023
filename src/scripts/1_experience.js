@@ -34,16 +34,15 @@ function filtreThemes(theme, i){
 
 function playNote(index){
     console.log("Play note "+index)
-    keySounds[index].currentTime = 0
-    keySounds[index].volume = 1
-    // if (isSafari) {
-    //     keySounds[index].addEventListener('ended',function(){
-    //         console.log("Reload note "+index+" ended")
-    //         keySounds[index] = new Audio('assets/songs/note'+index+'.mp3')
-    //         keySounds[index].preload = "auto";
-    //         keySounds[index].load()
-    //     })
-    // }
+    keySounds[index].play()
+    if (isSafari) {
+        keySounds[index].addEventListener('ended',function(){
+            console.log("Reload note "+index+" ended")
+            keySounds[index] = new Audio('assets/songs/note'+index+'.mp3')
+            keySounds[index].preload = "auto";
+            keySounds[index].load()
+        })
+    }
 }
 
 function setThemesInput(){
