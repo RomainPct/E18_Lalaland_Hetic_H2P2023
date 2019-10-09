@@ -19,7 +19,14 @@ function hideAndCleanExperienceNavigator(){
     },3000)
 }
 function launchVideo(){
+    focusedVideo = videosContainer.querySelector('video.focus')
+    if (focusedVideo !== null) {
+        focusedVideo.style.zIndex = "10"
+        focusedVideo.classList.remove('focus')
+    }
     video = videosContainer.querySelector('video[data-name="'+typedTheme+'"]')
+    video.style.zIndex = "100"
+    video.classList.add('focus')
     video.play()
     // Réaffiche le navigateur quand la vidéo est finie
     video.addEventListener('ended',function(){
