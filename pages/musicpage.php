@@ -1,4 +1,4 @@
-<section class="musicPageTitle">
+<section id="musicPageTitle">
     <h3>Bande Originale</h3>
 </section>
 
