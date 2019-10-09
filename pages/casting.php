@@ -1,5 +1,5 @@
 <section class="containerRyanGosling">
-    <div class="containerRyanGosling__ImageRyan">
+    <div class="containerRyanGosling__imageRyan">
         <img src="assets/images/Ryan-Gosling.jpg" alt="Ryan Gosling">
     </div>
     <div class="containerRyanGosling__descriptionRyan">
@@ -9,12 +9,12 @@
     </div>
 </section>
 <section class="containerEmmaStone">
-    <div class="containerEmmaStone__ImageEmma">
+    <div class="containerEmmaStone__imageEmma">
         <img src="assets/images/Emma-Stone.jpg" alt="Emma Stone">
     </div>
     <div class="containerEmmaStone__descriptionEmma">
         <h2>Emma Stone</h2>
-        <p>Dans le rôle de Mia Dolan</p>
+        <p>Dans le rôle de <b>Mia Dolan<b></p>
         <p>L’actrice américaine s’est imposée dans le monde du cinéma grâce à son expérience dans des classiques tels que <i>La Couleur des sentiments</i> et <i>The Amazing Spider-man.</i></p>
     </div>
 </section>

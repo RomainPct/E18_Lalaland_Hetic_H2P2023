@@ -6,10 +6,16 @@
     right: 0;
     left: 0;
     top: 0;
+    &__imageRyan{
+        width: 50%;
+    }
     &__descriptionRyan{
         font-family: $font-default;
         font-size: $font-size-title;
         background-color: #6A2FB3;
+        h2{
+            margin-top: 100px;
+        }
         p{
             margin: 14px 100px;
             color: $light-text-color-primary;
@@ -25,10 +31,16 @@
     right: 0;
     left: 0;
     top: 0px;
+    &__imageEmma{
+        width: 50%;
+    }
     &__descriptionEmma{
         font-family: $font-default;
         font-size: $font-size-title;
         background-color: #03084A;
+        h2{
+            margin-top: 100px;
+        }
         p{
             margin: 14px 100px;
             color: $light-text-color-primary;
