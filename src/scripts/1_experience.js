@@ -33,11 +33,17 @@ function filtreThemes(theme, i){
 }
 
 function playNote(index){
-    keySounds[index].play()
-    keySounds[index].addEventListener('ended',function(){
-        keySounds[index] = new Audio('assets/songs/note'+index+'.mp3')
-        keySounds[index].load()
-    })
+    console.log("Play note "+index)
+    keySounds[index].currentTime = 0
+    keySounds[index].volume = 1
+    // if (isSafari) {
+    //     keySounds[index].addEventListener('ended',function(){
+    //         console.log("Reload note "+index+" ended")
+    //         keySounds[index] = new Audio('assets/songs/note'+index+'.mp3')
+    //         keySounds[index].preload = "auto";
+    //         keySounds[index].load()
+    //     })
+    // }
 }
 
 function setThemesInput(){
@@ -62,12 +68,12 @@ function setThemesInput(){
                         } else {
                             launchVideo()
                         }
-                    }, 350 * i)
+                    }, 350 * (i + 1))
                 }
             }
         } else {
             // Lancer le son mauvais
-            playNote(8)
+            playNote(7)
             // Annuler la derniere lettre
             typedTheme = typedTheme.slice(0, -1)
             themeInput.value = typedTheme
@@ -122,7 +128,8 @@ function setHelpWords(){
 
 function loadNotes(){
     for (let i = 0; i <= 7; i++) {
-        let sound = new Audio('assets/songs/note'+i+'.mp3')
+        const sound = new Audio('assets/songs/note'+i+'.mp3')
+        sound.preload = "auto";
         sound.load()
         keySounds.push(sound)
     }

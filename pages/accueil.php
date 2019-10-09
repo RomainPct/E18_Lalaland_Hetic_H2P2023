@@ -16,7 +16,7 @@
         </div>
     </div>
     <div id="js_videosContainer" class="experience__videosContainer">
-        <video data-name="danse" src="assets/videos/danse.mp4"></video>
+        <video data-name="danse" src="http://localhost:3000/assets/videos/danse.mp4" preload="auto"></video>
     </div>
     <a href="#" id="js_leaveExperience" class="secondary experience__leaveLabel">Quitter l'expérience</a>
     <div id="audios"></div>
