@@ -21,3 +21,4 @@
     <a href="#" id="js_leaveExperience" class="secondary experience__leaveLabel">Quitter l'expérience</a>
     <div id="audios"></div>
 </section>
+<script src="assets/howler/dist/howler.min.js"></script>

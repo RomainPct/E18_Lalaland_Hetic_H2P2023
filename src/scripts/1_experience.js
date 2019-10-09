@@ -143,3 +143,10 @@ function setExperience(){
 }
 
 setExperience()
+
+// var sound = new Howl({
+//     src: ['assets/songs/note1.mp3']
+// })
+// console.log(sound)
+  
+// sound.play()
