@@ -1,5 +1,12 @@
 <section id="home">
-    <a id="js_launchExperience" href="#experience">Lancer l'expérience</a>
+    <img src="assets/images/laladance.jpg" class="hero_background" alt="">
+    <span class="title">La La Land</span>
+    <a id="js_launchExperience" class="btn hero_btn" href="#experience">Lancer l'expérience</a>
+    <div class="awards">
+        <img src="assets/images/awardvenice.png" class="venice" alt="">
+        <img src="assets/images/awardvenice.png" class="venice" alt="">
+
+    </div>
 </section>
 <section id="js_experience" class="experience">
     <div class="experience__navigator" id="js_experienceNavigator">
@@ -15,9 +22,7 @@
             <div class="experience__navigator__help__line"></div>
         </div>
     </div>
-    <div id="js_videosContainer" class="experience__videosContainer">
-        <video data-name="danse" src="http://localhost:3000/assets/videos/danse.mp4" preload="auto"></video>
-    </div>
+    <div id="js_videosContainer" class="experience__videosContainer"></div>
     <a href="#" id="js_leaveExperience" class="secondary experience__leaveLabel">Quitter l'expérience</a>
     <div id="audios"></div>
 </section>
