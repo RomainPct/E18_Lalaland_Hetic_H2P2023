@@ -1,5 +1,7 @@
 // SelectAll les images qui doivent faire parti de l'effet
+let imagesCasting = document.querySelectorAll(".characterContainer__img")
 // SelectAll les __description qui doivent faire parti de l'effet
+let descriptionActors = document.querySelectorAll(".characterContainer__description")
 
 // détecter l'événement de scroll
     // Récupérer la position du scroll sur Y
