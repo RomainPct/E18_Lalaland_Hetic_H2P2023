@@ -16,6 +16,7 @@
     left: -80vw;
     transition: left 0.3s
     
+    
 }
 #header__box{
     padding: 100px;
@@ -23,12 +24,15 @@
     
 
     ul{
+        list-style: none;
+        line-height: 37px;
         a:active {
             color: $light-text-color-primary;
         }
-        list-style: none;
-        line-height: 37px;
-        text-decoration: none;
+        a{
+            text-decoration: none;
+            margin-bottom: 37px;
+        }
         li:hover{
             text-decoration: underline;
             text-decoration-color: $color-primary;
