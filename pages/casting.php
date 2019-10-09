@@ -29,6 +29,6 @@ $nextPageName = "La gallerie";
     <div class="containerJohnLegend__descriptionJohn">
         <h2>John Legend</h2>
         <p class="roleText">Dans le rôle de Keith</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae saepe labore sunt quis? Quisquam odit odio, ab corrupti ipsum cumque quis dicta ex error? Perferendis repudiandae facilis omnis voluptatibus repellat.</p>
+        <p> Principalement connu pour sa carrière de chanteur et de musicien, John Legend a participé pour la première fois dans le tournage d'un film en 2016, <i>La La Land.</i></p>
     </div>
 </section>
