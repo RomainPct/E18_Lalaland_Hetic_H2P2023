@@ -5,7 +5,7 @@
         <h2>MENU</h2>
         <ul>
             <li>
-                 <a href="#"><p>Accueil</p></a>
+                 <a href="/Accueil"><p>Accueil</p></a>
             </li>
             <li>
                  <a href="/Synopsis"><p>Synopsis</p></a>
