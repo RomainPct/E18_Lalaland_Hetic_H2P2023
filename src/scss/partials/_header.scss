@@ -25,13 +25,16 @@
 
     ul{
         list-style: none;
-        line-height: 37px;
+        padding-inline-start: 0;
+        
         a:active {
             color: $light-text-color-primary;
         }
         a{
             text-decoration: none;
             margin-bottom: 37px;
+            color: $light-text-color-primary;
+            font-size: 23px;
         }
         li:hover{
             text-decoration: underline;
