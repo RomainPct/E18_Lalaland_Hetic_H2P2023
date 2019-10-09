@@ -24,7 +24,7 @@ $nextPageName = "Le synopsis";
                 <input type="text" id="js_experienceNavigatorInput" name="experience_theme" class="experience__navigator__inputBox__input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 <label for="experience_theme" id="js_experienceNavigatorLabel" class="experience__navigator__inputBox__label">Danse</label>
             </div>
-            <p class="secondary experience__navigator__instructions">Tapez le thème que vous souhaitez découvrir</p>
+            <p class="small experience__navigator__instructions">Tapez le thème que vous souhaitez découvrir</p>
         </div>
         <div class="experience__navigator__help">
             <div class="experience__navigator__help__line"></div>

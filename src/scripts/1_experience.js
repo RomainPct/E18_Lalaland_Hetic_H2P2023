@@ -12,27 +12,29 @@ const launchExpButton = select('#js_launchExperience'),
     typedTheme = "",
     keySounds = []
 
-function hideAndCleanExperienceNavigator(){
-    experience.classList.add('videoFocused')
-    setTimeout(function(){
-        setThemeLabelContent(null,true)
-    },3000)
-}
-function launchVideo(){
+function focusVideo(theme) {
+    console.log("Focus video : "+theme)
+    // Cacher l'ancienne vidéo
     focusedVideo = videosContainer.querySelector('video.focus')
-    if (focusedVideo !== null) {
-        focusedVideo.style.zIndex = "10"
+    if (focusedVideo) {
         focusedVideo.classList.remove('focus')
     }
-    video = videosContainer.querySelector('video[data-name="'+typedTheme+'"]')
-    video.style.zIndex = "100"
+    // Afficher la nouvelle
+    video = videosContainer.querySelector('video[data-name="'+theme+'"]')
     video.classList.add('focus')
+}
+
+function launchVideo(){
+    focusVideo(typedTheme)
+    video = videosContainer.querySelector('video[data-name="'+typedTheme+'"]')
     video.play()
     // Réaffiche le navigateur quand la vidéo est finie
     video.addEventListener('ended',function(){
+        video.currentTime = 0
         experience.classList.remove('videoFocused')
         themeInput.focus()
         videosContainer.style.filter = "saturate(0%)"
+        setThemeLabelContent(null,true)
     })
 }
 
@@ -41,7 +43,6 @@ function filtreThemes(theme, i){
 }
 
 function playNote(index){
-    console.log("Play note "+index)
     keySounds[index].play()
 }
 
@@ -59,7 +60,7 @@ function setThemesInput(){
                 playNote(typedTheme.length - 1)
             }
             if (themes.includes(typedTheme)){
-                hideAndCleanExperienceNavigator()
+                experience.classList.add('videoFocused')
                 for (let i = 0; i <= 7 - typedTheme.length; i++) {
                     setTimeout(function(){
                         if (i <= 6 - typedTheme.length) {
@@ -91,8 +92,11 @@ function setExperienceActions(){
         e.preventDefault()
         experience.classList.remove('visible')
         experience.classList.remove('videoFocused')
+        videosContainer.style.filter = "saturate(0%)"
+        setThemeLabelContent(null,true)
         videosContainer.querySelectorAll('video').forEach(video => {
             video.pause()
+            video.currentTime = 0
         })
     })
 }
@@ -107,6 +111,7 @@ function setThemeLabelContent(value = null, resetingInput = false){
     }
     // Load la video
     if (!loadedVideos.includes(selectedTheme)) {
+        console.log("Load video for "+selectedTheme)
         const video = document.createElement('video')
         video.setAttribute('src','assets/videos/'+selectedTheme+'.m4v')
         video.setAttribute('preload','auto')
@@ -114,6 +119,9 @@ function setThemeLabelContent(value = null, resetingInput = false){
         videosContainer.appendChild(video)
         loadedVideos.push(selectedTheme)
     }
+    setTimeout(function(){
+        focusVideo(selectedTheme)
+    },1)
 }
 
 function setHelpWords(){
@@ -134,7 +142,8 @@ function setHelpWords(){
 function loadNotes(){
     for (let i = 0; i <= 7; i++) {
         keySounds.push(new Howl({
-            src: ['assets/songs/note'+i+'.webm','assets/songs/note'+i+'.mp3']
+            src: ['assets/songs/note'+i+'.webm','assets/songs/note'+i+'.mp3'],
+            volume: 0.4
         }))
     }
 }
