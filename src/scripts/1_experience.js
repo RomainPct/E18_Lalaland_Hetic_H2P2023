@@ -21,6 +21,7 @@ function focusVideo(theme) {
     }
     // Afficher la nouvelle
     video = videosContainer.querySelector('video[data-name="'+theme+'"]')
+    video.currentTime = 0
     video.classList.add('focus')
 }
 
@@ -30,7 +31,6 @@ function launchVideo(){
     video.play()
     // Réaffiche le navigateur quand la vidéo est finie
     video.addEventListener('ended',function(){
-        video.currentTime = 0
         experience.classList.remove('videoFocused')
         themeInput.focus()
         videosContainer.style.filter = "saturate(0%)"
@@ -92,12 +92,13 @@ function setExperienceActions(){
         e.preventDefault()
         experience.classList.remove('visible')
         experience.classList.remove('videoFocused')
-        videosContainer.style.filter = "saturate(0%)"
-        setThemeLabelContent(null,true)
         videosContainer.querySelectorAll('video').forEach(video => {
             video.pause()
-            video.currentTime = 0
         })
+        setTimeout(function(){
+            videosContainer.style.filter = "saturate(0%)"
+            setThemeLabelContent(null,true)
+        },1000)
     })
 }
 
@@ -121,7 +122,7 @@ function setThemeLabelContent(value = null, resetingInput = false){
     }
     setTimeout(function(){
         focusVideo(selectedTheme)
-    },1)
+    },10)
 }
 
 function setHelpWords(){
