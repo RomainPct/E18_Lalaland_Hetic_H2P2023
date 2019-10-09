@@ -1,0 +1,31 @@
+.title {
+    z-index: 100;
+    font-family: $font-primary;
+    font-size: $font-size-extra;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10%;
+    margin-top: -40%;
+}
+
+.hero_background {
+    width: 100%
+}
+
+.hero_btn {
+    margin-left: 21%;
+    padding-top: 20%;
+    font-family: $font-default;
+}
+
+
+.awards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.venice .toronto {
+    width: 10%;
+    align-items: flex-end;
+}
