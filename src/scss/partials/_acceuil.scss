@@ -1,7 +1,12 @@
+#home {
+    overflow: hidden;
+}
+
 .title {
     z-index: 100;
     font-family: $font-primary;
     font-size: $font-size-extra;
+    color: $light-text-color-primary;
     display: flex;
     justify-content: flex-start;
     margin-left: 10%;
@@ -12,20 +17,63 @@
     width: 100%
 }
 
-.hero_btn {
+.btn {
     margin-left: 21%;
-    padding-top: 20%;
+    padding-top: 0%;
     font-family: $font-default;
+    font-size: $font-size-title;
 }
 
+/* 
+.hero__btn {
+    transform: scale(1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__btn::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#4B99FD, #BD3994);
+    ;
+    transform: translateY(100%);
+}
+
+.hero__btn:hover::before {
+    transition: all .2s ease-in;
+    transform: translateY(0%);
+}
+
+.hero__btn:hover {
+    transition: all .3s ease-out;
+    background-color: white;
+    transform: scale(1.05);
+    color: black;
+} */
+
+/* .awards_content {
+    display: flex;
+    align-items: flex-end;
+} */
 
 .awards {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-end;
+    width: 100%;
+    height: 480px;
 }
 
-.venice .toronto {
-    width: 10%;
-    align-items: flex-end;
+.venice,
+.damienc,
+.toronto,
+.song,
+.production {
+    width: 8%;
 }
