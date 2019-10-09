@@ -1,3 +1,7 @@
+<?php
+$nextPageLink = "/gallerie";
+$nextPageName = "La gallerie";
+?>
 <section class="containerRyanGosling">
     <div class="containerRyanGosling__imageRyan">
         <img src="assets/images/Ryan-Gosling.jpg" alt="Ryan Gosling">
@@ -14,7 +18,17 @@
     </div>
     <div class="containerEmmaStone__descriptionEmma">
         <h2>Emma Stone</h2>
-        <p>Dans le rôle de <b>Mia Dolan<b></p>
+        <p>Dans le rôle de <b>Mia Dolan</b></p>
+        <p>L’actrice américaine s’est imposée dans le monde du cinéma grâce à son expérience dans des classiques tels que <i>La Couleur des sentiments</i> et <i>The Amazing Spider-man.</i></p>
+    </div>
+</section>
+<section class="containerJohnLegend">
+    <div class="containerJohnLegend__imageJohn">
+        <img src="assets/images/john_legend.jpg" alt="John Legend">
+    </div>
+    <div class="containerJohnLegend__descriptionJohn">
+        <h2>John Legend</h2>
+        <p>Dans le rôle de <b>Keith</b></p>
         <p>L’actrice américaine s’est imposée dans le monde du cinéma grâce à son expérience dans des classiques tels que <i>La Couleur des sentiments</i> et <i>The Amazing Spider-man.</i></p>
     </div>
 </section>
