@@ -1,16 +1,14 @@
-#musicPageTitle{
-    margin-top: 100px;
-    margin-left: 100px;
-}
 #musicPageContainer{
     padding: 100px;
+}
+#musicPageContainer__Sub{
     display: flex;
     justify-content: space-between;
     &__leftBox{
         width: 70%;
         iframe{
             width: 80%;
-            height: 38vw;
+            height: 100%;
         }
         &__iconsBox{
             margin-top: 37px;
