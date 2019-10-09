@@ -1,5 +1,5 @@
 <footer class="footer">
-    <a href="/<?php echo $nextPageLink ?>" class="footer__link">
+    <a href="<?php echo $nextPageLink ?>" class="footer__link">
         <h4>Découvrir</h4>
         <h2><?php echo $nextPageName ?></h2>
     </a>
