@@ -1,27 +1,57 @@
 #home {
-    overflow: hidden;
+  overflow: hidden;
+  background-image: url(/assets/images/laladance.jpg);
+  background-size: 100% auto;
+  background-position: center;
+  height: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .title {
-    z-index: 100;
-    font-family: $font-primary;
-    font-size: $font-size-extra;
-    color: $light-text-color-primary;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 10%;
-    margin-top: -40%;
+  z-index: 100;
+  font-family: $font-primary;
+  font-size: $font-size-extra;
+  color: $light-text-color-primary;
+  margin-top: 162px;
+  justify-content: space-around;
 }
 
-.hero_background {
-    width: 100%
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  flex-direction: column;
 }
 
 .btn {
-    margin-left: 21%;
-    padding-top: 0%;
-    font-family: $font-default;
-    font-size: $font-size-title;
+  font-family: $font-default;
+  font-size: $font-size-title;
+  position: relative;
+  transform: scale(1);
+  margin-left: 50px;
+}
+
+.btn:hover {
+  transition: 0.4s;
+  transform: scale(x1.5);
+  color: aliceblue;
+}
+
+.awards {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4%;
+}
+
+.venice,
+.damienc,
+.toronto,
+.song,
+.production {
+  width: 8%;
 }
 
 /* 
@@ -61,19 +91,3 @@
     display: flex;
     align-items: flex-end;
 } */
-
-.awards {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    width: 100%;
-    height: 480px;
-}
-
-.venice,
-.damienc,
-.toronto,
-.song,
-.production {
-    width: 8%;
-}
