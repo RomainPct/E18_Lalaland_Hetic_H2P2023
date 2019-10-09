@@ -1,0 +1,45 @@
+.menuIcon{
+    position: fixed;
+    left: 37px;
+    top: 37px;
+}
+
+.menuIcon:hover{
+    cursor: pointer;
+}
+
+.subMenu{
+    z-index: 5000;
+    height: 100%;
+    background-color: $color-secondary;
+    position: fixed;
+    left: -80vw;
+    transition: left 0.3s
+    
+    
+}
+#header__box{
+    padding: 100px;
+
+    
+
+    ul{
+        list-style: none;
+        line-height: 37px;
+        a:active {
+            color: $light-text-color-primary;
+        }
+        a{
+            text-decoration: none;
+            margin-bottom: 37px;
+        }
+        li:hover{
+            text-decoration: underline;
+            text-decoration-color: $color-primary;
+        }
+    }
+}
+
+.visible{
+    left: 0;
+}
