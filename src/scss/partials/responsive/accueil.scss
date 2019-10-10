@@ -10,8 +10,8 @@
         font-size: 23px;
         text-decoration: none;
         color: $light-text-color-primary;
-        padding: 10vw;
         margin-top: 10vw;
+        padding: 0;
         opacity: 0.6;
         border-radius: 20px;
         transition: opacity 1s;
@@ -19,7 +19,7 @@
         text-align: center;
         width: 50%;
         img{
-          width: 100%;
+          width: 80%;
         }
       }
       &__link:hover{
@@ -36,7 +36,7 @@
       width: 100%;
   
       img{
-        width: 30vw;
+        width: 38vw;
         padding-top: 4vw;
       }
     }
