@@ -1,4 +1,9 @@
-const launchExpButton = select('#js_launchExperience'),
+let launchExpButton, experience, experienceNavigator, themeInput, themeLabel, leaveExperienceButton, videosContainer, loadedVideos, helpLines, typedTheme, keySounds,
+    themes = [ "amour", "bonheur", "danse", "casting", "rêves", "nuit", "passion", "futur", "échec", "magie", "soulier" ],
+    themesUnaccented = [ "amour", "bonheur", "danse", "casting", "reves", "nuit", "passion", "futur", "echec", "magie", "soulier" ]
+
+function setExperienceVariables(){
+    launchExpButton = select('#js_launchExperience'),
     experience = select("#js_experience"),
     experienceNavigator = select('#js_experienceNavigator'),
     themeInput = select('#js_experienceNavigatorInput')
@@ -7,10 +12,9 @@ const launchExpButton = select('#js_launchExperience'),
     videosContainer = select('#js_videosContainer'),
     loadedVideos = [],
     helpLines = selectAll('.experience__navigator__help__line'),
-    themes = [ "amour", "bonheur", "danse", "casting", "rêves", "nuit", "passion", "futur", "échec", "magie", "soulier" ],
-    themesUnaccented = [ "amour", "bonheur", "danse", "casting", "reves", "nuit", "passion", "futur", "echec", "magie", "soulier" ],
     typedTheme = "",
     keySounds = []
+}
 
 function focusVideo(theme) {
     console.log("Focus video : "+theme)
@@ -152,13 +156,10 @@ function loadNotes(){
 }
 
 function setExperience(){
+    setExperienceVariables()
     setThemesInput()
     setExperienceActions()
     setHelpWords()
     setThemeLabelContent()
     loadNotes()
-}
-
-if (window.location.pathname == "/" || window.location.pathname == "/accueil") {
-    setExperience()
 }

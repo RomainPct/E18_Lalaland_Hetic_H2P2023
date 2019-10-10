@@ -1,0 +1,7 @@
+.swupTransition {
+    transition: filter 1s;
+  }
+  
+  html.is-animating .swupTransition {
+      filter: saturate(0) blur(50px);
+  }

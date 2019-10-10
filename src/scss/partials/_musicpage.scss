@@ -1,4 +1,4 @@
-#musicPageContainer{
+.musicPageContainer{
     padding: 100px;
     background-image: url("/assets/images/imagesMusique/musiqueBackground.png");
     background-size: 100% 100%;
@@ -8,7 +8,7 @@
         margin-bottom: 37px;
     }
 }
-#musicPageContainer__Sub{
+.musicPageContainer__Sub{
     display: flex;
     justify-content: space-between;
     &__leftBox{
@@ -32,7 +32,7 @@
         display: flex;
         flex-direction: column;
 
-        #albumCover{
+        .albumCover{
            width: 100%;
         }
         

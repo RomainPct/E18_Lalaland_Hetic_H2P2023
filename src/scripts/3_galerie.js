@@ -1,4 +1,4 @@
-let galeriePictures = selectAll('.galerie__imageBox')
+let galeriePictures
 
 function setGaleriePicturesCenter(){
     for (let i = 0; i < galeriePictures.length; i++) {
@@ -8,6 +8,7 @@ function setGaleriePicturesCenter(){
 }
 
 function setGalerie(){
+    galeriePictures = selectAll('.galerie__imageBox')
     setGaleriePicturesCenter()
     window.onresize = setGaleriePicturesCenter
     window.onscroll = function () {
@@ -16,8 +17,4 @@ function setGalerie(){
         })
         closeMenu()
     }
-}
-
-if (window.location.pathname == "/galerie") {
-    setGalerie()
 }

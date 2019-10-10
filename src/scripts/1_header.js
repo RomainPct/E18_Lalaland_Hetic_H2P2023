@@ -1,5 +1,5 @@
-let menuIcon = document.querySelector('.menuIcon')
-let subMenu = document.querySelector('.subMenu')
+const menuIcon = document.querySelector('.menuIcon'),
+    subMenu = document.querySelector('.subMenu')
 
 menuIcon.addEventListener(
     'click',
