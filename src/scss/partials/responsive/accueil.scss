@@ -5,12 +5,13 @@
         
      &__title{
         font-size: 37px;
+        margin: 0;
      }
       &__link{
         font-size: 23px;
         text-decoration: none;
         color: $light-text-color-primary;
-        margin-top: 10vw;
+        margin-top: 30vw;
         padding: 0;
         opacity: 0.6;
         border-radius: 20px;
@@ -22,11 +23,7 @@
           width: 80%;
         }
       }
-      &__link:hover{
-        opacity: 1;
-        padding: 0;
-  
-      }
+      
     }
   
     &__awards{
