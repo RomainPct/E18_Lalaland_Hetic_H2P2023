@@ -127,6 +127,10 @@
         bottom: 26px;
         transform: translateX(-50%);
         z-index: 100;
+        text-decoration: none;
+    }
+    &__leaveLabel:hover{
+        text-decoration: underline;
     }
     audio {
         display: none;
