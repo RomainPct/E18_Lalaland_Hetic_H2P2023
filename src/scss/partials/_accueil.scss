@@ -20,10 +20,6 @@
       font-size: $font-size-body;
       color: $light-text-color-primary;
       text-align: center;
-      &__icon:hover {
-        transform: scale(1.3);
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-      }
       &__icon {
         background-color: rgba($color-tertiary, 0.7);
         width: 60px;
@@ -32,7 +28,6 @@
         padding: 23px;
         margin: 0 auto 14px;
         box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
-        transition: transform 0.3s, box-shadow .3s;
         animation: pop 5s infinite;
         img{
           height: 100%;
@@ -50,7 +45,6 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 100%;
-
     img{
       width: 10vw;
     }

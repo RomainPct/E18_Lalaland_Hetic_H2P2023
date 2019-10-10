@@ -10,9 +10,6 @@ function init(){
         setGalerie()
     } else if (path == "/casting") {
         setCasting()
-    } else {
-        console.log("No special js")
-        console.log(window.location.pathname)
     }
 }
 

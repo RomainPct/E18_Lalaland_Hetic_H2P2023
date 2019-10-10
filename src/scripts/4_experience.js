@@ -169,7 +169,6 @@ function setHelpWords(){
             line.appendChild(span)  
         })
     })
-    console.log(alreadyPlayedThemes)
     alreadyPlayedThemes.forEach(theme => {
         setVisuallyThemeAsAlreadyPlayed(theme)
     })
