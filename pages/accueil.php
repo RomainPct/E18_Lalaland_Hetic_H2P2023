@@ -6,10 +6,16 @@ $nextPageName = "Le synopsis";
 <section class="homeContainer">
     <div class="homeContainer__box">
         <h2 class="homeContainer__box__title">La La Land</h2>
-        <a id="js_launchExperience" class="homeContainer__box__link" href="#" title="Lancer l'expérience">
+        <a id="js_launchExperience" class="homeContainer__box__link" href="#experience" title="Lancer l'expérience">
+            <div class="homeContainer__box__link__icon">
+                <img src="/assets/images/imagesHome/key.svg" alt="Note de musique La La Lande">
+            </div>
+            <span>Vivre l'expérience</span>
+        </a>
+        <!-- <a id="js_launchExperience" class="homeContainer__box__link" href="#" title="Lancer l'expérience">
             <img src="/assets/images/imagesHome/videoIcon.png" alt="Démarrer l'expérience La La Land">
             <br>Démarrer l'expérience
-        </a>
+        </a> -->
          
     </div>
     <div class="homeContainer__awards">

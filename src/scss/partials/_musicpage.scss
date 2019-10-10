@@ -15,8 +15,10 @@
     &__leftBox{
         width: 70%;
         iframe{
+            border: none;
             width: 80%;
             height: 25vw;
+            border-radius: 5px;
         }
         &__iconsBox{
             margin-top: 37px;
@@ -35,6 +37,7 @@
 
         .albumCover{
            width: 100%;
+           border-radius: 5px;
         }
         
         &__iconsBox{

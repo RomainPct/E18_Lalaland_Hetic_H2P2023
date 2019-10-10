@@ -12,20 +12,31 @@
   &__box{
     text-align: center;
    &__title{
-    margin-bottom: 6vw;
+    margin-bottom: 62px;
    }
-    &__link{
-      font-size: 23px;
-      text-decoration: none;
-      color: $light-text-color-primary;
-      padding: 1.8vw;
-      opacity: 0.6;
-      border-radius: 20px;
-      transition: opacity 1s;
+    &__link {
       display: inline-block;
-      width: 24vw;
-      img{
-        width: 40%;
+      text-decoration: none;
+      font-size: $font-size-body;
+      color: $light-text-color-primary;
+      text-align: center;
+      &__icon:hover {
+        transform: scale(1.3);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      }
+      &__icon {
+        background-color: rgba($color-tertiary, 0.7);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 23px;
+        margin: 0 auto 14px;
+        box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s, box-shadow .3s;
+        animation: pop 5s infinite;
+        img{
+          height: 100%;
+        } 
       }
     }
     &__link:hover{
@@ -41,8 +52,14 @@
     width: 100%;
 
     img{
-      width: 16vw;
+      width: 10vw;
     }
   }
 
+}
+
+@keyframes pop {
+  from {transform: scale(1); box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);}
+  50% {transform: scale(1.1); box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);}
+  to {transform: scale(1); box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);}
 }
