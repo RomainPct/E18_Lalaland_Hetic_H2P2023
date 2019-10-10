@@ -73,6 +73,9 @@
                     color: transparent;
                     text-shadow: 0 0 5px $light-text-color-placeholder;
                     transition: text-shadow 1s;
+                    &.alreadySeen {
+                        text-shadow: 0 0 1px $light-text-color-placeholder;
+                    }
                 }
                 span:hover {
                     text-shadow: 0 0 1px $light-text-color-secondary;

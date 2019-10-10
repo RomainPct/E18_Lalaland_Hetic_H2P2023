@@ -11,8 +11,9 @@
 .subMenu{
     z-index: 5000;
     background-color: $background-color;
+    max-width: 100vw;
     position: fixed;
-    left: -80vw;
+    left: -100vw;
     top: 0;
     bottom: 0;
     display: flex;

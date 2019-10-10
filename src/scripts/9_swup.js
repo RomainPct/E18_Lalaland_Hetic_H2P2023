@@ -5,13 +5,10 @@ function init(){
     window.onscroll = closeMenu
     let path = window.location.pathname
     if (path == "/" || path == "/accueil") {
-        console.log("set accueil")
         setExperience()
     } else if (path == "/galerie") {
-        console.log("set galerie")
         setGalerie()
     } else if (path == "/casting") {
-        console.log("set casting")
         setCasting()
     } else {
         console.log("No special js")
