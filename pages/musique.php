@@ -2,8 +2,7 @@
 $nextPageLink = "http://www.allocine.fr/film/fichefilm_gen_cfilm=229490.html";
 $nextPageName = "La La Land";
 ?>
-
-
+<h1>Bande originale du film La La Lande</h1>
 <section class="musicPageContainer">
     <h2>Bande Originale</h2>
     <div class="musicPageContainer__Sub">

@@ -2,7 +2,7 @@
 $nextPageLink = "/galerie";
 $nextPageName = "La galerie";
 ?>
-
+<h1>Casting de La La Land : Ryan Gosling et Emma Stone</h1>
 <section class="characterContainer gosling">
     <div class="characterContainer__description">
         <h2>Ryan Gosling</h2>

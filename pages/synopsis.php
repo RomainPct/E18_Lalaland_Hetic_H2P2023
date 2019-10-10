@@ -2,6 +2,7 @@
 $nextPageLink = "/casting";
 $nextPageName = "Le casting";
 ?>
+<h1>Synospis du film La La Lande</h1>
 <section class="synopsis">
     <h2>Synopsis</h2>
     <p>
