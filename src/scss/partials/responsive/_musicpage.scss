@@ -3,6 +3,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: 37px;
+    
     h2{
         font-size: 37px;
         margin-bottom: 37px;
@@ -10,8 +11,10 @@
 }
 .musicPageContainer__Sub{
     display: flex;
+    flex-direction: column;
     &__leftBox{
         width: 100%;
+        
         iframe{
             width: 80%;
         }
