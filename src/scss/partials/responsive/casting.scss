@@ -1,0 +1,23 @@
+.characterContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    &__img {
+        width: 100%;
+        transition: none !important;
+        transform: none !important;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    &__description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 14px 61px;
+        h2{
+            font-size: $font-size-s-extra;
+        }
+    }
+}
