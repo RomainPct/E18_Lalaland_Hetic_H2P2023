@@ -8,8 +8,7 @@ $nextPageName = "La La Land";
     <h2>Bande Originale</h2>
     <div class="musicPageContainer__Sub">
         <div class="musicPageContainer__Sub__leftBox">
-            <iframe src="https://open.spotify.com/embed/album/3GU8BzFEAdFSRjc8jZkL3S" frameborder="0"
-                allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://open.spotify.com/embed/album/3GU8BzFEAdFSRjc8jZkL3S" allow="encrypted-media"></iframe>
             <div class="musicPageContainer__Sub__leftBox__iconsBox">
                 <a href="https://music.apple.com/fr/album/la-la-land-original-motion-picture-soundtrack/1440863506">
                     <img src="/assets/images/imagesMusique/logoitunes.png" alt="Ecouter La La Land sur iTunes">

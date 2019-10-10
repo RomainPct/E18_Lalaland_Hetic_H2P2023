@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="fr">
+<html lang="fr">
+<head>
     <meta charset="utf-8">
     <title>La La Land - <?php include 'php/rooterTitle.php' ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

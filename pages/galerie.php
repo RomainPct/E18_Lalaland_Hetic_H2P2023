@@ -2,7 +2,7 @@
 $nextPageLink = "/musique";
 $nextPageName = "La musique";
 ?>
-<section class="galerie">
+<div class="galerie">
     <?php
     foreach(scandir("assets/images/galerie/") as $fileName) {
         if ($fileName != "." && $fileName != "..") {
@@ -10,4 +10,4 @@ $nextPageName = "La musique";
         }
     }
     ?>
-</section>
+</div>
