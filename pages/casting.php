@@ -10,12 +10,12 @@ $nextPageName = "La galerie";
         <p>Acteur et producteur de cinéma, a dès son plus jeune âge exercé la danse. Il a tourné dans le célèbre drame romantique <i>N’oublie jamais (The Notebook).</i></p>
     </div>
     <div class="characterContainer__img">
-        <img src="assets/images/Ryan-Gosling.jpg" alt="Ryan Gosling">
+        <img src="assets/images/Ryan-Gosling.jpg" alt="Ryan Gosling" loading="lazy">
     </div>
 </section>
 <section class="characterContainer stone">
     <div class="characterContainer__img">
-        <img src="assets/images/Emma-Stone.jpg" alt="Emma Stone">
+        <img src="assets/images/Emma-Stone.jpg" alt="Emma Stone" loading="lazy">
     </div>
     <div class="characterContainer__description">
         <h2>Emma Stone</h2>
@@ -30,12 +30,12 @@ $nextPageName = "La galerie";
         <p> Principalement connu pour sa carrière de chanteur et de musicien, John Legend a participé pour la première fois dans le tournage d'un film en 2016, <i>La La Land.</i></p>
     </div>
     <div class="characterContainer__img">
-        <img src="assets/images/john_legend.jpg" alt="John Legend">
+        <img src="assets/images/john_legend.jpg" alt="John Legend" loading="lazy">
     </div>
 </section>
 <section class="characterContainer simmons">
     <div class="characterContainer__img">
-        <img src="assets/images/JK_Simmons.jpg" alt="Jonathan Kimble Simmons">
+        <img src="assets/images/JK_Simmons.jpg" alt="Jonathan Kimble Simmons" loading="lazy">
     </div>
     <div class="characterContainer__description">
         <h2>J.K Simmons</h2>
