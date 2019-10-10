@@ -16,6 +16,7 @@
     z-index: 0;
     &__img {
         width: 50vw;
+        transition: transform 0.5s;
         img {
             width: 100%;
             display: block;

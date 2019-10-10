@@ -40,6 +40,6 @@ $nextPageName = "La galerie";
     <div class="characterContainer__description">
         <h2>Jonathan Kimble Simmons</h2>
         <p class="roleText">Dans le rôle de Bill </p>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium alias consectetur expedita accusamus ad dolorum veritatis, perferendis tempora id nam eum illo reprehenderit, consequatur molestiae illum dolores, qui repellat porro!</p>
+        <p>Acteur vétéran de la scène holywoodienne, il a joué dans le film <i>Spider-Man</i> ou encore <i>Whiplash</i> qui lui a permis de gagner de multiples récompenses.</p>
     </div>
 </section>
