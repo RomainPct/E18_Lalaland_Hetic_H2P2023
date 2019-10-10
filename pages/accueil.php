@@ -5,7 +5,8 @@ $nextPageName = "Le synopsis";
 <section class="homeContainer">
     <div class="homeContainer__box">
          <h2 class="homeContainer__box__title">La La Land</h2>
-         <a id="js_launchExperience" class="homeContainer__box__link" href="#">Lancer l'expérience</a>
+        <a id="js_launchExperience" class="homeContainer__box__link" href="#"> <img src="/assets/images/imagesHome/videoIcon.png" alt="video icon"> <br>démarrer l'expérience</a>
+         
     </div>
     <div class="homeContainer__awards">
         <img src="assets/images/imagesHome/awarddamien.png" alt="actress">
