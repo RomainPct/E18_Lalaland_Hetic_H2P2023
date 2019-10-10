@@ -15,12 +15,12 @@
    }
     &__link{
       font-size: 23px;
-      text-decoration: underline;
+      text-decoration: none;
       color: $light-text-color-primary;
-      padding: 2vw;
-      background-color: $color-primary;
+      padding: 1.6vw;
+      background-color: $color-tertiary;
       opacity: 0.6;
-      border-radius: 40px;
+      border-radius: 20px;
       transition: opacity 1s;
     }
     &__link:hover{
