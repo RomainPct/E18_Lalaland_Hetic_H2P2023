@@ -1,14 +1,10 @@
 .synopsis {
-    min-height: 95vh;
-    background: url("/assets/images/synopsis/synopsis.png") no-repeat left top;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 37;
-    padding-right: 61px;
-    p {
-        max-width: 700px;
+    padding: 61px 37px;
+    h2{
+        font-size: $font-size-s-extra;
     }
 }
