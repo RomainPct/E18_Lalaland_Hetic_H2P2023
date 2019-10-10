@@ -9,14 +9,15 @@
         font-size: 23px;
         text-decoration: none;
         color: $light-text-color-primary;
-        padding: 1.8vw;
+        padding: 10vw;
         opacity: 0.6;
         border-radius: 20px;
         transition: opacity 1s;
         display: inline-block;
-        width: 24vw;
+        text-align: center;
+        width: 50%;
         img{
-          width: 40%;
+          width: 100%;
         }
       }
       &__link:hover{
