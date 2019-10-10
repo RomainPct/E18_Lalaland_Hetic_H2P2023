@@ -15,7 +15,6 @@ function setCasting() {
            charactersLine[i].style.opacity = 1 - val 
 
             const offset = val * 600
-            console.log(i+ " => "+offset)
             if (offset > 0) {
                 imagesCasting[i].style.transform = "translateY("+ offset +"px)"
             } else {
