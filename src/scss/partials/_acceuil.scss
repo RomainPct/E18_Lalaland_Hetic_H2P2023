@@ -1,92 +1,31 @@
-#home {
-  overflow: hidden;
-  background-image: url(/assets/images/laladance.jpg);
-  background-size: 100% auto;
-  background-position: center;
-  height: 100%;
+.homeContainer{
+  background-image: url("/assets/images/imagesHome/backgroundImage.jpg");
+  background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  &__box{
+    text-align: center;
+    margin-bottom: 4vw;
+   &__title{
+     margin-bottom: 8vw;
+   }
+    &__link{
+      font-size: 23px;
+      text-decoration: none;
+      color: $light-text-color-primary;
+      padding: 1.6vw;
+      background-color: $color-tertiary;
+      opacity: 0.6;
+      border-radius: 20px;
+      transition: opacity 1s;
+    }
+    &__link:hover{
+      opacity: 1;
+
+    }
+  }
 }
-
-.title {
-  font-family: $font-primary;
-  font-size: $font-size-extra;
-  color: $light-text-color-primary;
-  margin-top: 100px;
-  justify-content: space-around;
-}
-
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 100px;
-  flex-direction: column;
-}
-
-.btn {
-  font-family: $font-default;
-  font-size: $font-size-title;
-  position: relative;
-  transform: scale(1);
-  margin-left: 50px;
-}
-
-.btn:hover {
-  transition: 0.4s;
-  transform: scale(x1.5);
-  color: aliceblue;
-}
-
-.awards {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 4%;
-}
-
-.venice,
-.damienc,
-.toronto,
-.song,
-.production {
-  width: 8%;
-}
-
-/* 
-.hero__btn {
-    transform: scale(1);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero__btn::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(#4B99FD, #BD3994);
-    ;
-    transform: translateY(100%);
-}
-
-.hero__btn:hover::before {
-    transition: all .2s ease-in;
-    transform: translateY(0%);
-}
-
-.hero__btn:hover {
-    transition: all .3s ease-out;
-    background-color: white;
-    transform: scale(1.05);
-    color: black;
-} */
-
-/* .awards_content {
-    display: flex;
-    align-items: flex-end;
-} */
