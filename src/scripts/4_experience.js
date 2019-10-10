@@ -56,9 +56,11 @@ function setThemeAsAlreadyPlayed(theme) {
 }
 
 function setVisuallyThemeAsAlreadyPlayed(theme) {
-    experienceNavigator.querySelectorAll('span[data-theme='+theme+']').forEach( span => {
-        span.classList.add('alreadySeen')
-    })
+    if (themes.includes(theme)) {
+        experienceNavigator.querySelectorAll('span[data-theme='+theme+']').forEach( span => {
+            span.classList.add('alreadySeen')
+        })
+    }
 }
 
 function filtreThemes(theme, i){
@@ -167,6 +169,7 @@ function setHelpWords(){
             line.appendChild(span)  
         })
     })
+    console.log(alreadyPlayedThemes)
     alreadyPlayedThemes.forEach(theme => {
         setVisuallyThemeAsAlreadyPlayed(theme)
     })
