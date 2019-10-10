@@ -24,7 +24,7 @@ $nextPageName = "La La Land";
             <img class="albumCover" src="../assets/images/imagesMusique/albumcover.jpg" alt="album">
             <div class="musicPageContainer__Sub__rightBox__iconsBox">
                 <a href="https://www.fnac.com/a10311259/Bande-originale-de-film-La-La-Land-Vinyle-album?esl-k=sem-google%7cng%7cc258108183051%7cm%7ckpla297888842381%7cp%7ct%7cdc%7ca56985827681%7cg1263923012&gclid=EAIaIQobChMI-KCb4OeR5QIVFp7VCh0soATBEAQYASABEgIFwPD_BwE&gclsrc=aw.ds&oref=00000000-0000-0000-0000-000000000000&storecode=4019" title="Acheter le vinyle de la bande originale de La La Land">
-                    <img src="/assets/images/imagesMusique/logovinyl.png" alt="Vinyle bande originale du film La La Lande">
+                    <img src="/assets/images/imagesMusique/logovinyl.png" alt="Vinyle bande originale du film La La Land">
                 </a>
             </div>
         </div>
