@@ -73,7 +73,9 @@ function setThemesInput(){
             }
         } else {
             // Lancer le son mauvais
-            playNote(7)
+            if (typedTheme.slice(-1) != "^") {
+                playNote(7)
+            }
             // Annuler la derniere lettre
             typedTheme = typedTheme.slice(0, -1)
             themeInput.value = typedTheme

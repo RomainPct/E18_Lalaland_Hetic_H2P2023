@@ -14,6 +14,7 @@ function setGalerie(){
         galeriePictures.forEach(pic => {
             pic.style.transform = "translateY(-"+ Math.abs( (pic.centre + window.scrollY) /3) +"px)"
         })
+        closeMenu()
     }
 }
 
