@@ -16,20 +16,21 @@
 
 
 @media screen and (orientation:portrait) {
-@import "partials/responsive/header";
-@import "partials/responsive/footer";
-@import "partials/responsive/fonts";
-@import "partials/responsive/buttons";
-@import "partials/responsive/experience";
-@import "partials/responsive/casting";
-@import "partials/responsive/accueil";
-@import "partials/responsive/musicpage";
-@import "partials/responsive/synopsis";
-@import "partials/responsive/galerie";
+// @import "partials/responsive/header";
+// @import "partials/responsive/footer";
+// @import "partials/responsive/fonts";
+// @import "partials/responsive/buttons";
+// @import "partials/responsive/experience";
+// @import "partials/responsive/casting";
+// @import "partials/responsive/accueil";
+// @import "partials/responsive/musicpage";
+// @import "partials/responsive/synopsis";
+// @import "partials/responsive/galerie";
 }
 body,
 html {
-  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {

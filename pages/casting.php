@@ -38,8 +38,8 @@ $nextPageName = "La galerie";
         <img src="assets/images/JK_Simmons.jpg" alt="Jonathan Kimble Simmons">
     </div>
     <div class="characterContainer__description">
-        <h2>Jonathan Kimble Simmons</h2>
+        <h2>J.K Simmons</h2>
         <p class="roleText">Dans le rôle de Bill </p>
-        <p>Acteur vétéran de la scène holywoodienne, il a joué dans le film <i>Spider-Man</i> ou encore <i>Whiplash</i> qui lui a permis de gagner de multiples récompenses.</p>
+        <p>Acteur vétéran de la scène holywoodienne, Jonathan Kimble Simmons a joué dans le film <i>Spider-Man</i> ainsi que <i>Whiplash</i> qui lui a permis de gagner de multiples récompenses.</p>
     </div>
 </section>
