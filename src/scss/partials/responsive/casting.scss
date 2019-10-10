@@ -2,20 +2,23 @@
     position: relative;
     display: flex;
     flex-direction: column-reverse;
+    opacity: 1 !important;
     &__img {
         width: 100%;
         transition: none !important;
         transform: none !important;
+        order: 1;
         img {
             width: 100%;
             display: block;
         }
     }
     &__description {
+        order: 0;
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 14px 61px;
+        padding: 23px 37px;
         h2{
             font-size: $font-size-s-extra;
         }
