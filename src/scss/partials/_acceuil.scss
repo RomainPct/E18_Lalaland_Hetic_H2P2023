@@ -12,14 +12,14 @@
     text-align: center;
     padding: 14vw;
    &__title{
-      margin-bottom: 6vw;
+      margin-bottom: 10vw;
    }
     &__link{
       font-size: 23px;
       text-decoration: none;
       color: $light-text-color-primary;
-      padding: 1.6vw;
-      background-color: $color-tertiary;
+      padding: 1.8vw;
+      background-color: #FAAF48;
       opacity: 0.6;
       border-radius: 20px;
       transition: opacity 1s;
@@ -31,7 +31,6 @@
   }
 
   &__awards{
-    margin-top: 10vw;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
