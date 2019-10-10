@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteBase /
-RewriteRule ^(.*)\.(?!js|css|jpg|png|svg)([^.]*)$ $1\.php
+RewriteRule ^(.*)\.(?!js|css|jpg|png|svg|webm|mp3|m4v|eot|ttf|woff|woof2)([^.]*)$ $1\.php
 RewriteCond %{REQUEST_URI} !^/assets/.*$
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
