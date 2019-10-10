@@ -10,28 +10,30 @@
 
 .subMenu{
     z-index: 5000;
-    height: 100%;
-    background-color: $color-secondary;
+    background-color: $background-color;
     position: fixed;
-    left: -80vw;
-    transition: left 0.5s
-    
-    
+    left: -50vw;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0px 100px rgba(0,0,0,0.3);
+    transition: left 1s;
 }
 #header__box{
     padding: 100px;
-    
-
     ul{
         list-style: none;
         padding-inline-start: 0;
-        
+        li {
+            margin-top: 37px;
+            margin-left: 37px;
+        }
         a:active {
             color: $light-text-color-primary;
         }
         a{
             text-decoration: none;
-            margin-bottom: 37px;
             color: $light-text-color-primary;
             font-size: 23px;
         }
