@@ -19,16 +19,16 @@
         }
         &__iconsBox{
             margin-top: 37px;
-            a{
+            display: flex;
+            align-items: center;
+            a {
                 margin-right: 37px;
-                height: 100%;
-                width : 20%;
+                display: inline-block;
             }
         }
     }
     &__rightBox{
         width: 30%;
-        height: 40vw;
         display: flex;
         flex-direction: column;
 
