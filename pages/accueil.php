@@ -2,6 +2,7 @@
 $nextPageLink = "/synopsis";
 $nextPageName = "Le synopsis";
 ?>
+<h1>Expérience La La Land - Le Film en musique</h1>
 <section class="homeContainer">
     <div class="homeContainer__box">
          <h2 class="homeContainer__box__title">La La Land</h2>

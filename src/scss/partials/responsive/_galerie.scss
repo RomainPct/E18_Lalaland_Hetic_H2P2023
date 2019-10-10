@@ -1,0 +1,9 @@
+.galerie {
+    padding: 200px 23px 100px;
+    &__imageBox {
+        margin-bottom: 23px;
+        &__image {
+            width: 80vw;
+        }
+    }
+}
