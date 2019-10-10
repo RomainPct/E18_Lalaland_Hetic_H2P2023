@@ -1,6 +1,7 @@
 .experience {
     position: fixed;
     top: 0; bottom: 0; left: 100vw;
+    z-index: 10000;
     width: 100vw;
     background: #000;
     opacity: 0;
@@ -72,6 +73,9 @@
                     color: transparent;
                     text-shadow: 0 0 5px $light-text-color-placeholder;
                     transition: text-shadow 1s;
+                    &.alreadySeen {
+                        text-shadow: 0 0 1px $light-text-color-placeholder;
+                    }
                 }
                 span:hover {
                     text-shadow: 0 0 1px $light-text-color-secondary;
@@ -90,7 +94,7 @@
         width: 100%;
         height: 100%;
         filter: saturate(0%);
-        transition: filter .2s;
+        transition: filter .3s;
         video {
             position: absolute;
             top: 50%;
@@ -126,6 +130,10 @@
         bottom: 26px;
         transform: translateX(-50%);
         z-index: 100;
+        text-decoration: none;
+    }
+    &__leaveLabel:hover{
+        text-decoration: underline;
     }
     audio {
         display: none;

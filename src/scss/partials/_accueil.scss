@@ -1,0 +1,48 @@
+.homeContainer{
+  background-image: url("/assets/images/imagesHome/backgroundImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+  padding: 37px;
+  &__box{
+    text-align: center;
+   &__title{
+    margin-bottom: 6vw;
+   }
+    &__link{
+      font-size: 23px;
+      text-decoration: none;
+      color: $light-text-color-primary;
+      padding: 1.8vw;
+      opacity: 0.6;
+      border-radius: 20px;
+      transition: opacity 1s;
+      display: inline-block;
+      width: 24vw;
+      img{
+        width: 40%;
+      }
+    }
+    &__link:hover{
+      opacity: 1;
+
+    }
+  }
+
+  &__awards{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+
+    img{
+      width: 16vw;
+    }
+  }
+
+}

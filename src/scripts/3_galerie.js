@@ -1,22 +1,22 @@
-let galeriePictures = selectAll('.galerie__imageBox')
-
-function setGaleriePicturesCenter(){
-    for (let i = 0; i < galeriePictures.length; i++) {
-        galeriePictures[i].centre = (window.innerHeight/2) - galeriePictures[i].offsetTop - (galeriePictures[i].offsetHeight/2)
-        galeriePictures[i].style.transform = "translateY(-"+ Math.abs( (galeriePictures[i].centre + window.scrollY) /3) +"px)"
-    }
-}
+let galeriePictures
 
 function setGalerie(){
-    setGaleriePicturesCenter()
-    window.onresize = setGaleriePicturesCenter
+    galeriePictures = selectAll('.galerie__imageBox')
+    setGaleriePicturesPosition()
+    window.onresize = setGaleriePicturesPosition
     window.onscroll = function () {
-        galeriePictures.forEach(pic => {
-            pic.style.transform = "translateY(-"+ Math.abs( (pic.centre + window.scrollY) /3) +"px)"
-        })
+        setGaleriePicturesPosition()
+        closeMenu()
     }
 }
 
-if (window.location.pathname == "/galerie") {
-    setGalerie()
+function setGaleriePicturesPosition() {
+    galeriePictures.forEach(pic => {
+        let val = (window.scrollY + (window.innerHeight/2)) - (pic.offsetTop + (pic.offsetHeight/2))
+        if (val > 0) {
+            pic.style.transform = "translateY(-"+(val/3)+"px)"
+        } else {
+            pic.style.transform = "translateY(0px)"
+        }
+    })
 }

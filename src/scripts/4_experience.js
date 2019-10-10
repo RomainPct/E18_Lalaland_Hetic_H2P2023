@@ -1,19 +1,26 @@
-const launchExpButton = select('#js_launchExperience'),
-    experience = select("#js_experience"),
-    experienceNavigator = select('#js_experienceNavigator'),
-    themeInput = select('#js_experienceNavigatorInput')
-    themeLabel = select('#js_experienceNavigatorLabel'),
-    leaveExperienceButton = select('#js_leaveExperience'),
-    videosContainer = select('#js_videosContainer'),
-    loadedVideos = [],
-    helpLines = selectAll('.experience__navigator__help__line'),
+let launchExpButton, experience, experienceNavigator, themeInput, themeLabel, leaveExperienceButton, videosContainer, loadedVideos, helpLines, typedTheme, keySounds, alreadyPlayedThemes,
     themes = [ "amour", "bonheur", "danse", "casting", "rêves", "nuit", "passion", "futur", "échec", "magie", "soulier" ],
-    themesUnaccented = [ "amour", "bonheur", "danse", "casting", "reves", "nuit", "passion", "futur", "echec", "magie", "soulier" ],
-    typedTheme = "",
+    themesUnaccented = [ "amour", "bonheur", "danse", "casting", "reves", "nuit", "passion", "futur", "echec", "magie", "soulier" ]
+
+function setExperienceVariables(){
+    launchExpButton = select('#js_launchExperience')
+    experience = select("#js_experience")
+    experienceNavigator = select('#js_experienceNavigator')
+    themeInput = select('#js_experienceNavigatorInput')
+    themeLabel = select('#js_experienceNavigatorLabel')
+    leaveExperienceButton = select('#js_leaveExperience')
+    videosContainer = select('#js_videosContainer')
+    loadedVideos = []
+    helpLines = selectAll('.experience__navigator__help__line')
+    typedTheme = ""
     keySounds = []
+    alreadyPlayedThemes = JSON.parse(localStorage.getItem("alreadyPlayedThemes"))
+    if (alreadyPlayedThemes == null) {
+        alreadyPlayedThemes = []
+    }
+}
 
 function focusVideo(theme) {
-    console.log("Focus video : "+theme)
     // Cacher l'ancienne vidéo
     focusedVideo = videosContainer.querySelector('video.focus')
     if (focusedVideo) {
@@ -27,15 +34,33 @@ function focusVideo(theme) {
 
 function launchVideo(){
     focusVideo(typedTheme)
+    themeInput.blur()
     video = videosContainer.querySelector('video[data-name="'+typedTheme+'"]')
     video.play()
     // Réaffiche le navigateur quand la vidéo est finie
     video.addEventListener('ended',function(){
+        setThemeAsAlreadyPlayed(typedTheme)
         experience.classList.remove('videoFocused')
         themeInput.focus()
         videosContainer.style.filter = "saturate(0%)"
         setThemeLabelContent(null,true)
     })
+}
+
+function setThemeAsAlreadyPlayed(theme) {
+    if (!alreadyPlayedThemes.includes(theme)) {
+        alreadyPlayedThemes.push(theme)
+        localStorage.setItem('alreadyPlayedThemes',JSON.stringify(alreadyPlayedThemes))
+    }
+    setVisuallyThemeAsAlreadyPlayed(theme)
+}
+
+function setVisuallyThemeAsAlreadyPlayed(theme) {
+    if (themes.includes(theme)) {
+        experienceNavigator.querySelectorAll('span[data-theme='+theme+']').forEach( span => {
+            span.classList.add('alreadySeen')
+        })
+    }
 }
 
 function filtreThemes(theme, i){
@@ -73,7 +98,9 @@ function setThemesInput(){
             }
         } else {
             // Lancer le son mauvais
-            playNote(7)
+            if (typedTheme.slice(-1) != "^") {
+                playNote(7)
+            }
             // Annuler la derniere lettre
             typedTheme = typedTheme.slice(0, -1)
             themeInput.value = typedTheme
@@ -102,33 +129,37 @@ function setExperienceActions(){
     })
 }
 
-function setThemeLabelContent(value = null, resetingInput = false){
+function setThemeLabelContent(value = null, resetInput = false){
     const selectedTheme = (value !== null) ? value : themes[Math.floor(Math.random()*themes.length)]
     themeLabel.innerText = selectedTheme
     themeInput.style.width = themeLabel.offsetWidth +"px"
-    if (resetingInput) {
+    if (resetInput) {
         themeInput.value = ""
         typedTheme = ""
     }
     // Load la video
-    if (!loadedVideos.includes(selectedTheme)) {
-        console.log("Load video for "+selectedTheme)
-        const video = document.createElement('video')
-        video.setAttribute('src','assets/videos/'+selectedTheme+'.m4v')
-        video.setAttribute('preload','auto')
-        video.setAttribute('data-name',selectedTheme)
-        videosContainer.appendChild(video)
-        loadedVideos.push(selectedTheme)
-    }
+    loadVideo(selectedTheme)
     setTimeout(function(){
         focusVideo(selectedTheme)
-    },10)
+    },10) // Timeout pour éviter un bug de transition moche sur certains navigateurs
+}
+
+function loadVideo(theme) {
+    if (!loadedVideos.includes(theme)) {
+        const video = document.createElement('video')
+        video.setAttribute('src','assets/videos/'+theme+'.m4v')
+        video.setAttribute('preload','auto')
+        video.setAttribute('data-name',theme)
+        videosContainer.appendChild(video)
+        loadedVideos.push(theme)   
+    }
 }
 
 function setHelpWords(){
     helpLines.forEach(line => {
         themes.forEach(theme => {
             let span = document.createElement('span')
+            span.setAttribute('data-theme',theme)
             span.innerText = theme
             span.addEventListener('click',function(){
                 setThemeLabelContent(theme,true)
@@ -137,6 +168,10 @@ function setHelpWords(){
             })
             line.appendChild(span)  
         })
+    })
+    console.log(alreadyPlayedThemes)
+    alreadyPlayedThemes.forEach(theme => {
+        setVisuallyThemeAsAlreadyPlayed(theme)
     })
 }
 
@@ -150,13 +185,10 @@ function loadNotes(){
 }
 
 function setExperience(){
+    setExperienceVariables()
     setThemesInput()
     setExperienceActions()
     setHelpWords()
     setThemeLabelContent()
     loadNotes()
-}
-
-if (window.location.pathname == "/" || window.location.pathname == "/accueil") {
-    setExperience()
 }

@@ -6,12 +6,27 @@
 @import "partials/buttons";
 @import "partials/experience";
 @import "partials/casting";
-@import "partials/acceuil";
+@import "partials/accueil";
 @import "partials/musicpage";
 @import "partials/synopsis";
 @import "partials/galerie";
+@import "partials/swup";
 
 
+
+
+@media screen and (orientation:portrait) {
+@import "partials/responsive/header";
+@import "partials/responsive/footer";
+@import "partials/responsive/fonts";
+@import "partials/responsive/buttons";
+@import "partials/responsive/experience";
+@import "partials/responsive/casting";
+@import "partials/responsive/accueil";
+@import "partials/responsive/musicpage";
+@import "partials/responsive/synopsis";
+@import "partials/responsive/galerie";
+}
 body,
 html {
   height: 100%;

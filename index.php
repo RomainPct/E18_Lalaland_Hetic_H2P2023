@@ -19,8 +19,12 @@
 </head>
 <body>
     <?php include 'pages/elements/header.php'; ?>
-    <?php include 'php/rooter.php'; ?>
-    <?php include 'pages/elements/footer.php'; ?>
+    <main id="swup" class="swupTransition">
+        <?php include 'php/rooter.php'; ?>
+        <?php include 'pages/elements/footer.php'; ?>
+    </main>
+    <script src="assets/howler/dist/howler.min.js"></script>
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <script src="/assets/scripts/main.min.js"></script>
 </body>
 </html>
