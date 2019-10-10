@@ -5,16 +5,19 @@ $nextPageName = "Le synopsis";
 <h1>Expérience La La Land - Le Film en musique</h1>
 <section class="homeContainer">
     <div class="homeContainer__box">
-         <h2 class="homeContainer__box__title">La La Land</h2>
-        <a id="js_launchExperience" class="homeContainer__box__link" href="#"> <img src="/assets/images/imagesHome/videoIcon.png" alt="Démarrer l'expérience La La Land"> <br>Démarrer l'expérience</a>
+        <h2 class="homeContainer__box__title">La La Land</h2>
+        <a id="js_launchExperience" class="homeContainer__box__link" href="#" title="Lancer l'expérience">
+            <img src="/assets/images/imagesHome/videoIcon.png" alt="Démarrer l'expérience La La Land">
+            <br>Démarrer l'expérience
+        </a>
          
     </div>
     <div class="homeContainer__awards">
-        <img src="assets/images/imagesHome/awarddamien.png" alt="actress">
-        <img src="assets/images/imagesHome/awardproduction.png" alt="production">
-        <img src="assets/images/imagesHome/awardsong.png" alt="song">
-        <img src="assets/images/imagesHome/awardtoronto.png" alt="toronto">
-        <img src="assets/images/imagesHome/awardvenice.png" alt="venice">
+        <img src="assets/images/imagesHome/awarddamien.png" alt="Award Best Director Damien Chazelle">
+        <img src="assets/images/imagesHome/awardproduction.png" alt="Award Best Production design">
+        <img src="assets/images/imagesHome/awardsong.png" alt="Award best original song">
+        <img src="assets/images/imagesHome/awardtoronto.png" alt="People's choice award">
+        <img src="assets/images/imagesHome/awardvenice.png" alt="Award Best actress Emma Stone">
     </div>
 </section>
 
@@ -33,7 +36,7 @@ $nextPageName = "Le synopsis";
         </div>
     </div>
     <div id="js_videosContainer" class="experience__videosContainer"></div>
-    <a href="#" id="js_leaveExperience" class="secondary experience__leaveLabel">Quitter l'expérience</a>
+    <a href="#" id="js_leaveExperience" class="secondary experience__leaveLabel" title="Quitter l'expérience">Quitter l'expérience</a>
     <div id="audios"></div>
 </div>
 <script src="assets/howler/dist/howler.min.js"></script>
