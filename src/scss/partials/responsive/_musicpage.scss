@@ -1,0 +1,42 @@
+.musicPageContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 37px;
+    h2{
+        font-size: 37px;
+        margin-bottom: 37px;
+    }
+}
+.musicPageContainer__Sub{
+    display: flex;
+    &__leftBox{
+        width: 100%;
+        iframe{
+            width: 80%;
+        }
+        &__iconsBox{
+            margin-top: 37px;
+            display: flex;
+            align-items: center;
+            a {
+                margin-right: 37px;
+                display: inline-block;
+            }
+        }
+    }
+    &__rightBox{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .albumCover{
+           width: 100%;
+        }
+        
+        &__iconsBox{
+            text-align: center;
+            margin-top: 37px;
+        }
+    }
+}
