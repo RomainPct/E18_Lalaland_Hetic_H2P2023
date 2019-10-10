@@ -147,7 +147,7 @@ function setThemeLabelContent(value = null, resetInput = false){
 function loadVideo(theme) {
     if (!loadedVideos.includes(theme)) {
         const video = document.createElement('video')
-        video.setAttribute('src','assets/videos/'+theme+'.m4v')
+        video.setAttribute('src','assets/videos/'+themesUnaccented[themes.indexOf(theme)]+'.m4v')
         video.setAttribute('preload','auto')
         video.setAttribute('data-name',theme)
         videosContainer.appendChild(video)
