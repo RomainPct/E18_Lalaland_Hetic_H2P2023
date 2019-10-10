@@ -18,7 +18,6 @@ function setExperienceVariables(){
     if (alreadyPlayedThemes == null) {
         alreadyPlayedThemes = []
     }
-    console.log(alreadyPlayedThemes)
 }
 
 function focusVideo(theme) {
@@ -35,6 +34,7 @@ function focusVideo(theme) {
 
 function launchVideo(){
     focusVideo(typedTheme)
+    themeInput.blur()
     video = videosContainer.querySelector('video[data-name="'+typedTheme+'"]')
     video.play()
     // Réaffiche le navigateur quand la vidéo est finie
@@ -56,7 +56,6 @@ function setThemeAsAlreadyPlayed(theme) {
 }
 
 function setVisuallyThemeAsAlreadyPlayed(theme) {
-    console.log("setVisuallyThemeAsAlreadyPlayed : "+theme)
     experienceNavigator.querySelectorAll('span[data-theme='+theme+']').forEach( span => {
         span.classList.add('alreadySeen')
     })
